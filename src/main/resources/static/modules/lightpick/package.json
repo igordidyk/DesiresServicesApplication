@@ -1,0 +1,60 @@
+{
+  "_from": "lightpick",
+  "_id": "lightpick@1.2.5",
+  "_inBundle": false,
+  "_integrity": "sha512-/swWdj92qlyGSpkYWefZEEfIGCq2toVdEMEJ5PJwKmBwBRWvUtSW+uca0u7+uj69hOqLOvd1KcYXGmmWayAd8Q==",
+  "_location": "/lightpick",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "lightpick",
+    "name": "lightpick",
+    "escapedName": "lightpick",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/lightpick/-/lightpick-1.2.5.tgz",
+  "_shasum": "d6add28f7aa394a4673a48d2d074acf96e826ad2",
+  "_spec": "lightpick",
+  "_where": "C:\\Users\\User\\Desktop\\DesiresServices",
+  "author": {
+    "name": "Rinat G.",
+    "email": "lightpick@coding.kz",
+    "url": "http://coding.kz"
+  },
+  "bugs": {
+    "url": "https://github.com/wakirin/lightpick/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "moment": "^2.22.2"
+  },
+  "deprecated": false,
+  "description": "Javascript date range picker - lightweight, no jQuery",
+  "homepage": "https://github.com/wakirin/lightpick#readme",
+  "keywords": [
+    "datepicker",
+    "date",
+    "daterange",
+    "date",
+    "picker",
+    "range"
+  ],
+  "license": "MIT",
+  "main": "lightpick.js",
+  "name": "lightpick",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wakirin/lightpick.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.5"
+}

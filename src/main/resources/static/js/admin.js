@@ -129,3 +129,9 @@ btnOnClickNew.addEventListener('click', function () {
     }
     scheduleList.before(commonDivForSchedule);
 });
+
+//date picker
+new Lightpick({
+    field: document.getElementById('datepicker'),
+    singleDate: false
+});
