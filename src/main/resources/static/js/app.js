@@ -87,3 +87,191 @@ previous.onclick = function () {
     pauseSlideShow();
     previousSlide();
 };
+
+//add form for log in
+let blockForm = document.createElement('div');
+blockForm.setAttribute('class', 'block-form');
+
+let closeForm = document.createElement('span');
+closeForm.setAttribute('class', 'close');
+closeForm.appendChild(document.createTextNode('⊗'));
+
+let formLogIn = document.createElement('form');
+setAttributes(formLogIn, {'class': 'form-log-in', 'method': 'post'});
+
+let hEl = document.createElement('h1');
+hEl.setAttribute('class', 'header-for-login');
+hEl.appendChild(document.createTextNode('Login'));
+
+let formP1 = document.createElement('p');
+formP1.setAttribute('class', 'style-form');
+formP1.appendChild(document.createTextNode('Login:'));
+
+let formInput1 = document.createElement('input');
+setAttributes(formInput1, {
+    'class': 'style-form',
+    'type': 'email',
+    'placeholder': 'email',
+    'id': 'login'
+});
+
+let formP2 = document.createElement('p');
+formP2.setAttribute('class', 'style-form');
+formP2.appendChild(document.createTextNode('Password:'));
+
+let formInput2 = document.createElement('input');
+setAttributes(formInput2, {
+    'class': 'style-form',
+    'type': 'text',
+    'placeholder': 'password',
+    'id': 'password'
+});
+
+let formSubmit = document.createElement('button');
+setAttributes(formSubmit, {
+    'class': 'submit-form',
+    'id': 'submit-form-for-login',
+    'role': 'button'
+});
+
+let inputLogin = 'admin@gmail.com';
+let inputPassword = '1234';
+
+formSubmit.addEventListener('click', function () {
+    let email = document.getElementById('login').value;
+    let password = document.getElementById('password').value;
+
+    if(email === inputLogin && password === inputPassword){
+        formLogIn.setAttribute('action', 'admin.html');
+    }else {
+        alert('Login or password aren\'t valid');
+    }
+});
+
+formSubmit.appendChild(document.createTextNode('Login'));
+
+appendChildren(formLogIn, {hEl, formP1, formInput1, formP2, formInput2, formSubmit});
+appendChildren(blockForm, {closeForm, formLogIn});
+
+let centerClass = document.querySelectorAll('.center');
+let logIn = document.querySelectorAll('.log-in-and-open-from');
+for(let i = 0; i < logIn.length; i++){
+    for(let j = 0; j < centerClass.length; j++){
+        if(j === i){
+            logIn[i].addEventListener('click', function (e) {
+                centerClass[j].before(blockForm);
+                e.preventDefault();
+                blockForm.style.display = 'block';
+            }, false);
+
+            closeForm.addEventListener('click', function () {
+                blockForm.style.display = 'none';
+                let getElForClean = document.querySelectorAll('input.style-form');//clean after close form
+                for (let k = 0; k < getElForClean.length; k++) {
+                    getElForClean[k].value = '';
+                }
+            });
+        }
+    }
+}
+
+//add form for sign up
+let blockFormSignUp = document.createElement('div');
+blockFormSignUp.setAttribute('class', 'block-form');
+
+let closeFormSignUp = document.createElement('span');
+closeFormSignUp.setAttribute('class', 'close');
+closeFormSignUp.appendChild(document.createTextNode('⊗'));
+
+let formSignUp = document.createElement('form');
+setAttributes(formSignUp, {'class': 'form-log-in', 'method': 'get', 'action': 'user.html'});
+
+let hEl2 = document.createElement('h1');
+hEl2.setAttribute('class', 'header-for-login');
+hEl2.appendChild(document.createTextNode('Sing Up'));
+
+let signUpFormP1 = document.createElement('p');
+signUpFormP1.setAttribute('class', 'style-form');
+signUpFormP1.appendChild(document.createTextNode('Full name:'));
+
+let signUpFormInput1 = document.createElement('input');
+setAttributes(signUpFormInput1, {
+    'class': 'style-form',
+    'type': 'text',
+    'placeholder': 'Name',
+    'name': 'user-name',
+    'required': 'required'
+});
+
+let signUpFormP2 = document.createElement('p');
+signUpFormP2.setAttribute('class', 'style-form');
+signUpFormP2.appendChild(document.createTextNode('Email:'));
+
+let signUpFormInput2 = document.createElement('input');
+setAttributes(signUpFormInput2, {
+    'class': 'style-form',
+    'type': 'email',
+    'placeholder': 'Email',
+    'name': 'user-email',
+    'required': 'required'
+});
+
+let signUpFormP3 = document.createElement('p');
+signUpFormP3.setAttribute('class', 'style-form');
+signUpFormP3.appendChild(document.createTextNode('Password:'));
+
+let signUpFormInput3 = document.createElement('input');
+setAttributes(signUpFormInput3, {
+    'class': 'style-form',
+    'type': 'text',
+    'placeholder': 'Password',
+    'name': 'user-surname',
+    'required': 'required'
+});
+
+let signUpFormP4 = document.createElement('p');
+signUpFormP4.setAttribute('class', 'style-form');
+signUpFormP4.appendChild(document.createTextNode('Phone:'));
+
+let signUpFormInput4 = document.createElement('input');
+setAttributes(signUpFormInput4, {
+    'class': 'style-form',
+    'type': 'tel',
+    'placeholder': '0932067890',
+    'name': 'user-phone',
+    'required': 'required'
+});
+
+let signUpFormFormSubmit = document.createElement('button');
+setAttributes(signUpFormFormSubmit, {
+    'class': 'submit-form',
+    'id': 'submit-form-for-sign-up',
+    'role': 'button'
+});
+
+signUpFormFormSubmit.appendChild(document.createTextNode('Sign up'));
+
+appendChildren(formSignUp, {hEl2, signUpFormP1, signUpFormInput1, signUpFormP2, signUpFormInput2,
+    signUpFormP3, signUpFormInput3, signUpFormP4, signUpFormInput4, signUpFormFormSubmit});
+appendChildren(blockFormSignUp, {closeFormSignUp, formSignUp});
+
+let signUp = document.querySelectorAll('.sign-up-and-open-form');
+for(let i = 0; i < signUp.length; i++){
+    for(let j = 0; j < centerClass.length; j++){
+        if(j === i){
+            signUp[i].addEventListener('click', function (e) {
+                centerClass[j].before(blockFormSignUp);
+                e.preventDefault();
+                blockFormSignUp.style.display = 'block';
+            }, false);
+
+            closeFormSignUp.addEventListener('click', function () {
+                blockFormSignUp.style.display = 'none';
+                let getElForClean = document.querySelectorAll('input.style-form');
+                for (let k = 0; k < getElForClean.length; k++) {
+                    getElForClean[k].value = '';
+                }
+            });
+        }
+    }
+}
