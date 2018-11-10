@@ -238,3 +238,31 @@ a{
     border: 1px solid #268BD2;
     background: #268BD2;
 }
+
+/*contacts*/
+.grid-for-contacts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contacts-ing{
+    width: 60px;
+}
+
+.grid-text-contacts{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.frame-class{
+    width: 500px;
+    height: 350px;
+    border: 3px solid rgb(210, 180, 142);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.text-contacts{
+    text-align: right;
+    padding-right: 60px;
+}
