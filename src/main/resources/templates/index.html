@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Desire Services</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
 </head>
 <body>
+    <div class="anonymous" id="main">
+        <div class="center">
+            <div class="grid-all">
+                <header class="header-for-all">
+                    <div class="grid-header">
+                        <div><img src="../static/img/logo.png" alt="logo"></div>
+                        <div class="header-log">
+                            <div><a href="#" class="log-in-and-open-from">Вхід</a></div>
+                            <div><a href="#" class="sign-up-and-open-form">Зареєструватися</a></div>
+                        </div>
+                    </div>
+                </header>
+                <div class="content">
+                    <nav class="navigation-anonymous">
+                        <a href="#main"><div class="item-menu item-bg">Головна</div></a>
+                        <a href="#reservation"><div class="item-menu">Резервація</div></a>
+                        <a href="#menu-dishes"><div class="item-menu">Меню</div></a>
+                        <a href="#contacts"><div class="item-menu">Контакти</div></a>
+                    </nav>
+                    <div class="main-content">
+                        <div class="container">
+                            <ul id="slides">
+                                <li class="slide showing"></li>
+                                <li class="slide"></li>
+                                <li class="slide"></li>
+                            </ul>
+                            <div class="buttons">
+                                <button class="controls" id="previous">&lt;</button>
+                                <button class="controls no" id="pause">&#10074;&#10074;</button>
+                                <button class="controls" id="next">&gt;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="../static/js/app.js"></script>
 </body>
 </html>
