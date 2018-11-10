@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 @Builder
 @Entity
 @Table(name = "menu")
-public class CartOfDishes {
+public class CartOfDishes extends AuditModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "menu_id")

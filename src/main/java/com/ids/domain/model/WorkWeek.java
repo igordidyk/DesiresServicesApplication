@@ -12,7 +12,7 @@ import java.time.Instant;
 @Builder
 @Entity
 @Table(name = "work_week")
-public class WorkWeek {
+public class WorkWeek extends AuditModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "work_week_id")
