@@ -284,3 +284,143 @@ a{
     width: 850px;
     grid-column-gap: 40px;
 }
+
+/*img add and delete*/
+.add-img, .delete-img{
+    width: 30px;
+}
+
+.btn-add, .delete-btn, .btn-add-new, .add-btn-admin, .delete-btn-menu{
+    background: none;
+    border: none;
+}
+
+/*header for admin all pages*/
+.header-page{
+    text-align: center;
+}
+
+/*workers list*/
+.grid-add-center{
+    display: grid;
+    justify-items: center;
+}
+
+.grid-add-new-workers{
+    display: grid;
+    grid-template-columns: 300px 40px;
+    grid-column-gap: 60px;
+    grid-row-gap: 20px;
+}
+
+.grid-add-new-workers input{
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+}
+
+.list-of-workers{
+    grid-column: 1/span 2;
+    display: grid;
+    grid-row-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.main-content-workers-list{
+    display: grid;
+    width: 1000px;
+}
+
+.navigation-workers-list{
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    text-align: center;
+}
+
+.navigation-workers-list a > div{
+    padding: 10px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.common-div{
+    display: grid;
+    grid-template-columns: 300px 40px;
+    grid-column-gap: 60px;
+}
+
+.delete-btn{
+    grid-column: 2;
+}
+
+/*workers schedule*/
+.bg-for-nav{
+    background: rgb(150, 99, 68);
+}
+
+.header-workers{
+    margin: 20px;
+    background: rgb(202, 165, 112);
+    border: 0.5px solid black;
+    border-radius: 5px;
+}
+
+.bg-for-content{
+    background: rgb(150, 99, 68);
+    height: 600px;
+}
+
+.grid-header-schedule{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.header-page-schedule{
+    text-align: right;
+}
+
+/*date*/
+.card{
+    margin: 10px;
+}
+
+.text-workers, .select-workers{
+    padding: 10px;
+    background: rgb(202, 165, 112);
+    border-radius: 5px;
+    border: 0.5px solid black;
+    text-align: center;
+}
+
+.text-workers{
+    height: 20px;
+}
+
+.delete-btn-schedule, .btn-add-new{
+    height: 42px;
+    padding: 5px;
+}
+
+.add-new{
+    width: 32px;
+}
+
+.delete-img-schedule{
+    width: 26px;
+}
+
+.check-img{
+    width: 27px;
+}
+
+.grid-for-schedule{
+    display: grid;
+    grid-template-columns: 1fr 400px repeat(7, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin: 0 20px 20px 20px;
+}
+
+.bg-option{
+    background: rgb(236, 231, 176);
+}

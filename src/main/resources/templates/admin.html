@@ -33,6 +33,107 @@
         </div>
     </div>
 
+    <div class="anonymous" id="workers-list">
+        <div class="center">
+            <div class="grid-all">
+                <header class="header-for-all">
+                    <div class="grid-header">
+                        <div><img src="../static/img/logo.png" alt="logo"></div>
+                        <div class="header-log">
+                            <div><a href="index.html">Вихід</a></div>
+                        </div>
+                    </div>
+                </header>
+                <div class="content">
+                    <nav class="navigation-administrator">
+                        <a href="#admin"><div class="item-menu">Замовлення</div></a>
+                        <a href="#workers-list"><div class="item-menu item-bg">Працівники</div></a>
+                        <a href="#reservation-administrator"><div class="item-menu">Резервація</div></a>
+                        <a href="#menu-administrator"><div class="item-menu">Меню</div></a>
+                        <a href="#statistics"><div class="item-menu">Статистика</div></a>
+                    </nav>
+
+                    <div class="main-content-workers-list">
+                        <nav class="navigation-workers-list">
+                            <a href="#workers-list"><div class="bg-for-nav">Список</div></a>
+                            <a href="#workers-schedule"><div class="schedule-class">Розклад</div></a>
+                        </nav>
+                        <div class="bg-for-content">
+                            <h1 class="header-page header-workers">Список</h1>
+                            <div class="grid-add-center">
+                                <div class="grid-add-new-workers">
+                                    <input name="add-stuff" type="text" class="add-new-workers">
+                                    <button class="btn-add" disabled><img src="../static/img/add.png" alt="add" class="add-img"></button>
+                                    <div class="list-of-workers"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="anonymous" id="workers-schedule">
+        <div class="center">
+            <div class="grid-all">
+                <header class="header-for-all">
+                    <div class="grid-header">
+                        <div><img src="../static/img/logo.png" alt="logo"></div>
+                        <div class="header-log">
+                            <div><a href="index.html">Вихід</a></div>
+                        </div>
+                    </div>
+                </header>
+                <div class="content">
+                    <nav class="navigation-administrator">
+                        <a href="#admin"><div class="item-menu">Замовлення</div></a>
+                        <a href="#workers-list"><div class="item-menu item-bg">Працівники</div></a>
+                        <a href="#reservation-administrator"><div class="item-menu">Резервація</div></a>
+                        <a href="#menu-administrator"><div class="item-menu">Меню</div></a>
+                        <a href="#statistics"><div class="item-menu">Статистика</div></a>
+                    </nav>
+
+                    <div class="main-content-workers-list">
+                        <nav class="navigation-workers-list">
+                            <a href="#workers-list"><div>Список</div></a>
+                            <a href="#workers-schedule"><div class="schedule-class bg-for-nav">Розклад</div></a>
+                        </nav>
+                        <div class="bg-for-content">
+                            <div class="grid-header-schedule header-workers">
+                                <h1 class="header-page-schedule">Розклад</h1>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <input type="text" id="datepicker" class="form-control form-control-sm"/>
+                                            </div>
+                                            <div class="col-md-7" id="gist-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-for-schedule">
+                                <button class="btn-add-new text-workers"><img src="../static/img/add.png" alt="add" class="add-new"></button>
+                                <div class="text-workers">
+                                    <div>Прізвище Ім'я</div>
+                                </div>
+                                <div class="text-workers">Пн</div>
+                                <div class="text-workers">Вт</div>
+                                <div class="text-workers">Ср</div>
+                                <div class="text-workers">Чт</div>
+                                <div class="text-workers">Пт</div>
+                                <div class="text-workers">Сб</div>
+                                <div class="text-workers">Нд</div>
+                            </div>
+                            <div class="list-text-workers"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="../static/js/admin.js"></script>
 </body>
 </html>
