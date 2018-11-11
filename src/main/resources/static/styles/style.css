@@ -562,3 +562,13 @@ a{
 .main-content-statistics{
     width: 80%;
 }
+
+/*statistics*/
+#plain, #inverted, #polar{
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background: linear-gradient(to bottom, #9c6044, #efb69c);
+}
