@@ -425,6 +425,55 @@ a{
     background: rgb(236, 231, 176);
 }
 
+/*reservation*/
+.main-content-reservation{
+    width: 800px;
+    height: 742px;
+    align-content: center;
+    position: relative;
+}
+
+#parent{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 783px;
+    height: 742px;
+    background: url(../img/bg-sprite.png) center center no-repeat;
+    background-size: cover;
+}
+
+.div-sprite{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.lock-img, .img-sprite{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#object0, #object1, #object2, #object3, #object4,
+#object5, #object6, #object7, #object8, #object9,
+#object10, #object11, #object12, #object13, #object14{
+    position: absolute;
+}
+
+.grid-for-btn{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+}
+
+.drag-and-drop, .none-drag-and-drop{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background: linear-gradient(to bottom, #9c6044, #efb69c);
+}
+
 /*menu with dishes*/
 .menu-center-odd{
     padding: 40px 40px 40px 100px;
