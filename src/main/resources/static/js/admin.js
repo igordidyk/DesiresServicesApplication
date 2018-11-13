@@ -30,11 +30,16 @@ function appendChildren(parent, children) {
 
 //add list of workers
 let inputOnKey = document.querySelector('.add-new-workers');
+let inputNumber = document.querySelector('.add-new-workers-number');
 let btnOnClick = document.querySelector('.btn-add');
 let list = document.querySelector('.list-of-workers');
 
 inputOnKey.addEventListener('keyup', function () {
     inputOnKey.value !== '' ? btnOnClick.disabled = false : btnOnClick.disabled = true;
+});
+
+inputNumber.addEventListener('keyup', function () {
+    inputNumber.value !== '' ? btnOnClick.disabled = false : btnOnClick.disabled = true;
 });
 
 let scheduleList = document.querySelector('.list-text-workers');
@@ -45,6 +50,10 @@ btnOnClick.addEventListener('click', function () {
     divEl.setAttribute('class', 'text-workers list-workers-for-remove');
     divEl.appendChild(document.createTextNode(inputOnKey.value));
 
+    let divElNumber = document.createElement('div');
+    divElNumber.setAttribute('class', 'text-workers list-workers-for-remove');
+    divElNumber.appendChild(document.createTextNode(inputNumber.value));
+
     let btnDeleteEl = document.createElement('button');
     btnDeleteEl.setAttribute('class', 'delete-btn');
     let imgDeleteEl = document.createElement('img');
@@ -53,7 +62,7 @@ btnOnClick.addEventListener('click', function () {
 
     let commonDiv = document.createElement('div');
     commonDiv.setAttribute('class', 'common-div');
-    appendChildren(commonDiv, {divEl, btnDeleteEl});
+    appendChildren(commonDiv, {divEl, divElNumber, btnDeleteEl});
 
     list.appendChild(commonDiv);
     btnDeleteEl.addEventListener('click', function () {
@@ -66,6 +75,7 @@ btnOnClick.addEventListener('click', function () {
     });
     variable.push(inputOnKey.value);
     inputOnKey.value = '';
+    inputNumber.value = '';
     btnOnClick.disabled = true;
 });
 

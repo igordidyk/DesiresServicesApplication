@@ -286,7 +286,7 @@ a{
 }
 
 /*img add and delete*/
-.add-img, .delete-img{
+.add-img, .delete-img, .add-img-admin{
     width: 30px;
 }
 
@@ -308,12 +308,12 @@ a{
 
 .grid-add-new-workers{
     display: grid;
-    grid-template-columns: 300px 40px;
+    grid-template-columns: 300px 200px 40px;
     grid-column-gap: 60px;
     grid-row-gap: 20px;
 }
 
-.grid-add-new-workers input{
+.grid-add-new-workers input, .add-new-workers-number input{
     border-radius: 5px;
     padding: 10px;
     border: none;
@@ -344,12 +344,12 @@ a{
 
 .common-div{
     display: grid;
-    grid-template-columns: 300px 40px;
+    grid-template-columns: 300px 200px 40px;
     grid-column-gap: 60px;
 }
 
 .delete-btn{
-    grid-column: 2;
+    grid-column: 3;
 }
 
 /*workers schedule*/
@@ -382,6 +382,20 @@ a{
 /*date*/
 .card{
     margin: 10px;
+}
+
+.form-control {
+    background: rgb(150, 99, 68);
+    color: rgb(236, 231, 176);
+    border: 1px solid #bbbbbb;
+    cursor: pointer;
+    padding: 2px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.form-control::placeholder {
+    color: rgb(236, 231, 176);
+    text-align: center;
 }
 
 .text-workers, .select-workers{
@@ -522,10 +536,6 @@ a{
 .grid-for-item-menu{
     display: grid;
     grid-row-gap: 10px;
-}
-
-.add-img-admin{
-    width: 30px;
 }
 
 .item-menu-for-administrator{
