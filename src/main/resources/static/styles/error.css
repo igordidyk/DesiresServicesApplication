@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*main error container styling*/
+.error-container {
+    text-align: center;
+    font-size: 180px;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 800;
+    margin: 20px 15px;
+}
+.error-container > span {
+    display: inline-block;
+    line-height: 0.7;
+    position: relative;
+    color: #FFB485;
+}
+.error-container > span {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.error-container > span:nth-of-type(1) {
+    color: #D1F2A5;
+    animation: colordancing 4s infinite;
+}
+.error-container > span:nth-of-type(2) {
+    color: #F56991;
+    animation: colordancing2 4s infinite;
+}
+.error-container > span:nth-of-type(3) {
+    color: #F56991;
+    animation: colordancing2 4s infinite;
+}
+
+/*first spinner*/
+.error-container > span:nth-of-type(2) {
+    width: 120px;
+    height: 120px;
+}
+
+/*second spinner*/
+.error-container > span:nth-of-type(3) {
+    width: 120px;
+    height: 120px;
+}
+
+/*css validation opacity stub*/
+.stub {
+    --opacity: 0;
+}
+
+/*zero rotating and styling*/
+/*first spinner*/
+span:nth-of-type(2):before,
+span:nth-of-type(2):after {
+    opacity: var(--opacity);
+    border-radius: 0%;
+    content:"";
+    position: absolute;
+    top: 0; left: 0;
+    width: inherit; height: inherit;
+    border-radius: 999px;
+    box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+    inset 0 30px 0 rgba(239, 250, 180, 0.4),
+    inset -30px 0 0 rgba(255, 196, 140, 0.4),
+    inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+    animation: shadowsdancing 4s infinite;
+}
+
+/*second spinner*/
+span:nth-of-type(3):before,
+span:nth-of-type(3):after {
+    opacity: var(--opacity);
+    border-radius: 0%;
+    content:"";
+    position: absolute;
+    top: 0; left: 0;
+    width: inherit; height: inherit;
+    border-radius: 999px;
+    box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+    inset 0 30px 0 rgba(239, 250, 180, 0.4),
+    inset -30px 0 0 rgba(255, 196, 140, 0.4),
+    inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+    animation: shadowsdancing 4s infinite;
+}
+
+.error-container > span:nth-of-type(3):before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.error-container > span:nth-of-type(2):before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@keyframes shadowsdancing {
+    0% {
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+    }
+    25% {
+        box-shadow: inset 30px 0 0 rgba(245, 105, 145, 0.4),
+        inset 0 30px 0 rgba(209, 242, 165, 0.4),
+        inset -30px 0 0 rgba(239, 250, 180, 0.4),
+        inset 0 -30px 0 rgba(255, 196, 140, 0.4);
+    }
+    50% {
+        box-shadow: inset 30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 30px 0 rgba(245, 105, 145, 0.4),
+        inset -30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 -30px 0 rgba(239, 250, 180, 0.4);
+    }
+    75% {
+        box-shadow: inset 30px 0 0 rgba(239, 250, 180, 0.4),
+        inset 0 30px 0 rgba(255, 196, 140, 0.4),
+        inset -30px 0 0 rgba(245, 105, 145, 0.4),
+        inset 0 -30px 0 rgba(209, 242, 165, 0.4);
+    }
+    100% {
+        box-shadow: inset 30px 0 0 rgba(209, 242, 165, 0.4),
+        inset 0 30px 0 rgba(239, 250, 180, 0.4),
+        inset -30px 0 0 rgba(255, 196, 140, 0.4),
+        inset 0 -30px 0 rgba(245, 105, 145, 0.4);
+    }
+}
+
+/*numbers and words color dancing*/
+@keyframes colordancing {
+    0% {
+        color: #D1F2A5;
+    }
+    25% {
+        color: #F56991;
+    }
+    50% {
+        color: #FFC48C;
+    }
+    75% {
+        color: #EFFAB4;
+    }
+    100% {
+        color: #D1F2A5;
+    }
+}
+@keyframes colordancing2 {
+    0% {
+        color: #FFC48C;
+    }
+    25% {
+        color: #EFFAB4;
+    }
+    50% {
+        color: #D1F2A5;
+    }
+    75% {
+        color: #F56991;
+    }
+    100% {
+        color: #FFC48C;
+    }
+}
+@keyframes colordancing3 {
+    0% {
+        color: #D1F2A5;
+    }
+    25% {
+        color: #D7E23C;
+    }
+    50% {
+        color: #FF9A1F;
+    }
+    75% {
+        color: #FF8521;
+    }
+    100% {
+        color:#D1F2A5;
+    }
+}
+
+/*main info styling*/
+body{
+    background: #24344c;
+}
+.main-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.bg-error-page{
+    background: url('img/cooking.jpg') center center no-repeat;
+    background-size: 1590px;
+    height: 1060px;
+}
+.center-error{
+    padding: 120px;
+}
+html, button, input, select, textarea {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    color: bisque;
+}
+h1 {
+    text-align: center;
+    margin: 0 15px;
+}
+.zoom-area {
+    max-width: 400px;
+    margin: 30px auto 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+a.more-link {
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: 10px 15px;
+    line-height: 1.5;
+    text-decoration: none;
+    margin-top: 50px;
+    letter-spacing: 2px;
+    animation: colordancing3 4s infinite;
+}
