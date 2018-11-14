@@ -161,7 +161,7 @@ for (let i = 0; i < menuAdministrator.length; i++) {
     let inputDishMenu = document.createElement('input');
     setAttributes(inputDishMenu, {'class': 'item-menu-for-administrator name-dish', 'id': 'name-dish'});
 
-    let inputDishConsistMenu = document.createElement('input');
+    let inputDishConsistMenu = document.createElement('textarea');
     setAttributes(inputDishConsistMenu, {'class': 'item-menu-for-administrator dish-consist', 'id': 'dish-consist'});
 
     let inputWeightMenu = document.createElement('input');
@@ -194,6 +194,169 @@ let inputValueNameDish = document.querySelectorAll('.name-dish');
 let inputValueDishConsist = document.querySelectorAll('.dish-consist');
 let inputValueWeight = document.querySelectorAll('.weight');
 let inputValuePrice = document.querySelectorAll('.price');
+
+let vanishedInput = document.querySelectorAll('.input-title');
+let vanishedBtn = document.querySelectorAll('.btn-title-dish');
+let headerH = document.querySelectorAll('.menu-header-administrator');
+
+let pizza = document.querySelectorAll('.pizza');
+let dishHotCold = document.querySelectorAll('.dish-hot-cold');
+let soupHot = document.querySelectorAll('.soup-hot');
+let pancakesDesserts = document.querySelectorAll('.pancakes-desserts');
+let alcoAndNon = document.querySelectorAll('.alco-and-non');
+let counter1 = 0;
+
+/*Reading title input data*/
+for (let i = 0; i < vanishedBtn.length; i++) {
+    for (let j = 0; j < listOfDish.length; j++) {
+        if (j === i) {
+            vanishedInput[j].addEventListener('keyup', function () {
+                vanishedInput[j].value !== '' ? vanishedBtn[i].disabled = false : vanishedBtn[i].disabled = true;
+            });
+        }
+    }
+
+    /*Creating redacting button, image on that button and wrapper div for both */
+    let btnEdit = document.createElement('button');
+    btnEdit.setAttribute('class', 'btn-edit');
+    let imgEdit = document.createElement('img');
+    imgEdit.setAttribute('class', 'img-edit');
+    imgEdit.setAttribute('src', '../static/img/edit.png');
+    let commonDivEdit = document.createElement('div');
+    commonDivEdit.setAttribute('class', 'common-div-edit');
+    let pEl = document.createElement('p');
+    pEl.setAttribute('class', 'p-el');
+    btnEdit.append(imgEdit);
+
+    /*Add Event Listener for add button on dish title in menu*/
+    vanishedBtn[i].addEventListener('click', function () {
+        let counterStop = 0;
+        for (let j = 0; j < listOfDish.length; j++) {
+            if (j === i) {
+                vanishedBtn[i].style.display = 'none';
+                vanishedInput[j].style.display = 'none';
+                pEl.append(vanishedInput[j].value);
+                commonDivEdit.append(pEl);
+                commonDivEdit.append(btnEdit);
+                headerH[i].append(commonDivEdit);
+            }
+        }
+
+        /*Add Event Listener for remove button on dish title in menu*/
+        btnEdit.addEventListener('click', function () {
+            counterStop++;
+            if (counterStop === 1) {
+                for (let j = 0; j < listOfDish.length; j++) {
+                    if (j === i) {
+                        vanishedBtn[i].style.display = 'block';
+                        vanishedInput[j].style.display = 'block';
+                        pEl.innerText = '';
+                        vanishedInput[j].value = '';
+                        commonDivEdit.value = '';
+                        commonDivEdit.remove();
+                        counter1 = i;
+
+                        /*Checking and removing first or second element in dish navigation bar*/
+                        function circleTwoСondition(array) {
+                            for (let k = 0; k < array.length; k++) {
+                                if (array[k].childNodes[1]) {
+                                    array[k].childNodes[1].remove();
+                                } else {
+                                    array[k].childNodes[0].remove();
+                                }
+                            }
+                        }
+
+                        /*Removing first element in dish navigation bar*/
+                        function circleEasy(array) {
+                            for (let k = 0; k < array.length; k++) {
+                                array[k].childNodes[0].remove();
+                            }
+                        }
+
+                        /*Checking item in dish navigation bar when removing data from bar*/
+                        if (counter1 === 0) {
+                            circleEasy(pizza);
+                        }
+                        if (counter1 === 1) {
+                            circleTwoСondition(pizza);
+                        }
+                        if (counter1 === 2) {
+                            circleEasy(dishHotCold);
+                        }
+                        if (counter1 === 3) {
+                            circleTwoСondition(dishHotCold);
+                        }
+                        if (counter1 === 4) {
+                            circleEasy(soupHot);
+                        }
+                        if (counter1 === 5) {
+                            circleTwoСondition(soupHot);
+                        }
+                        if (counter1 === 6) {
+                            circleEasy(pancakesDesserts);
+                        }
+                        if (counter1 === 7) {
+                            circleTwoСondition(pancakesDesserts);
+                        }
+                        if (counter1 === 8) {
+                            circleEasy(alcoAndNon);
+                        }
+                        if (counter1 === 9) {
+                            circleTwoСondition(alcoAndNon);
+                        }
+                    }
+                }
+            }
+        });
+
+        /*Checking item in dish navigation bar*/
+        counter1 = i;
+        if(counter1 === 0){
+            circleNone(counter1, pizza);
+        }
+        if(counter1 === 1){
+            circleS(counter1, pizza);
+        }
+        if(counter1 === 2){
+            circleNone(counter1, dishHotCold);
+        }
+        if(counter1 === 3){
+            circleS(counter1, dishHotCold);
+        }
+        if(counter1 === 4){
+            circleNone(counter1, soupHot);
+        }
+        if(counter1 === 5){
+            circleS(counter1, soupHot);
+        }
+        if(counter1 === 6){
+            circleNone(counter1, pancakesDesserts);
+        }
+        if(counter1 === 7){
+            circleS(counter1, pancakesDesserts);
+        }
+        if(counter1 === 8){
+            circleNone(counter1, alcoAndNon);
+        }
+        if(counter1 === 9){
+            circleS(counter1, alcoAndNon);
+        }
+
+        /*Duplicates data from dish title into dish navigation bar  (two functions)*/
+        function circleNone(counter, array) {
+            for (let k = 0; k < array.length; k++) {
+                array[k].append(document.createTextNode(vanishedInput[counter].value));
+            }
+        }
+        function circleS(counter, array) {
+            for (let k = 0; k < array.length; k++) {
+                array[k].append(document.createTextNode(' / ' + vanishedInput[counter].value));
+            }
+        }
+    });
+}
+
 for (let i = 0; i < addBtnAdmin.length; i++) {
     for (let j = 0; j < listOfDish.length; j++) {
         if (j === i) {
@@ -211,6 +374,7 @@ for (let i = 0; i < addBtnAdmin.length; i++) {
             });
         }
     }
+
     addBtnAdmin[i].addEventListener('click', function () {
         for (let j = 0; j < listOfDish.length; j++) {
             if(j === i){

@@ -286,11 +286,11 @@ a{
 }
 
 /*img add and delete*/
-.add-img, .delete-img, .add-img-admin{
+.add-img, .delete-img, .add-img-admin, .img-title-dish, .img-edit{
     width: 30px;
 }
 
-.btn-add, .delete-btn, .btn-add-new, .add-btn-admin, .delete-btn-menu{
+.btn-add, .delete-btn, .btn-add-new, .add-btn-admin, .delete-btn-menu, .btn-title-dish, .btn-edit{
     background: none;
     border: none;
 }
@@ -489,6 +489,13 @@ a{
 }
 
 /*menu with dishes*/
+.dish-consist, .input-title{
+    resize: none;
+    border: 2px inset #EEEEEE;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .menu-center-odd{
     padding: 40px 40px 40px 100px;
 }
@@ -510,17 +517,33 @@ a{
     font-size: 12px;
 }
 
-.menu-header-administrator-odd{
+.common-div-edit{
+    grid-column: 1/ span 3;
+    display: grid;
+    grid-template-columns: 350px 1fr;
     text-align: center;
+}
+
+.btn-edit{
+    width: 40px;
+}
+
+.menu-header-administrator{
+    text-align: center;
+}
+
+.menu-header-administrator-odd{
+    display: grid;
+    grid-template-columns: 20% 50% 20%;
     font-size: 25px;
     padding-bottom: 30px;
 }
 
 .menu-header-administrator-even{
-    text-align: center;
+    display: grid;
+    grid-template-columns: 15% 39% 20%;
     font-size: 25px;
     padding-bottom: 30px;
-    width: 80%;
 }
 
 .grid-menu-and-dishes-odd{
