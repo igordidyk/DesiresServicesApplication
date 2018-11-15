@@ -507,3 +507,37 @@ for (let i = 0; i < divId.length; i++) {
         imgSprite[i].width /= 1.5;
     }
 }
+
+//order admin
+let orderAdmin = document.querySelectorAll('.order');
+let orderBtnLeft = document.querySelectorAll('.style-triangle-left');
+let orderBtnRight = document.querySelectorAll('.style-triangle-right');
+
+for (let i = 1; i < orderAdmin.length; i++) {
+    orderAdmin[i].style.display = 'none';
+}
+
+for (let i = 0; i < orderBtnLeft.length; i++) {
+
+    /*Order page slider for left button*/
+    orderBtnLeft[i].addEventListener('click', function (e) {
+        if(0 === i){
+            orderAdmin[i].style.display = 'none';
+            orderAdmin[orderAdmin.length-1].style.display = 'grid';
+        } else{
+            orderAdmin[i].style.display = 'none';
+            orderAdmin[i - 1].style.display = 'grid';
+        }
+    });
+
+    /*Order page slider for left button*/
+    orderBtnRight[i].addEventListener('click', function (e) {
+        if(orderAdmin.length - 1 === i){
+            orderAdmin[i].style.display = 'none';
+            orderAdmin[0].style.display = 'grid';
+        } else{
+            orderAdmin[i].style.display = 'none';
+            orderAdmin[i + 1].style.display = 'grid';
+        }
+    });
+}
