@@ -178,7 +178,7 @@ for (let i = 0; i < menuAdministrator.length; i++) {
 
     btnMenu.append(imgAddMenu);
 
-    let gridMenuAdministrator = document.createElement('div');
+    let gridMenuAdministrator = document.createElement('form');
     gridMenuAdministrator.setAttribute('class', 'grid-menu-administrator');
 
     appendChildren(gridMenuAdministrator, {inputDishMenu, inputDishConsistMenu, inputWeightMenu,
@@ -227,6 +227,7 @@ for (let i = 0; i < vanishedBtn.length; i++) {
     let pEl = document.createElement('p');
     pEl.setAttribute('class', 'p-el');
     btnEdit.append(imgEdit);
+    let formNone = document.querySelectorAll('.menu-header-administrator-form');
 
     /*Add Event Listener for add button on dish title in menu*/
     vanishedBtn[i].addEventListener('click', function () {
@@ -235,6 +236,7 @@ for (let i = 0; i < vanishedBtn.length; i++) {
             if (j === i) {
                 vanishedBtn[i].style.display = 'none';
                 vanishedInput[j].style.display = 'none';
+                formNone[i].style.display = 'none';
                 pEl.append(vanishedInput[j].value);
                 commonDivEdit.append(pEl);
                 commonDivEdit.append(btnEdit);
@@ -250,6 +252,7 @@ for (let i = 0; i < vanishedBtn.length; i++) {
                     if (j === i) {
                         vanishedBtn[i].style.display = 'block';
                         vanishedInput[j].style.display = 'block';
+                        formNone[i].style.display = 'grid';
                         pEl.innerText = '';
                         vanishedInput[j].value = '';
                         commonDivEdit.value = '';
@@ -523,7 +526,7 @@ for (let i = 0; i < orderBtnLeft.length; i++) {
     orderBtnLeft[i].addEventListener('click', function (e) {
         if(0 === i){
             orderAdmin[i].style.display = 'none';
-            orderAdmin[orderAdmin.length-1].style.display = 'grid';
+            orderAdmin[orderAdmin.length - 1].style.display = 'grid';
         } else{
             orderAdmin[i].style.display = 'none';
             orderAdmin[i - 1].style.display = 'grid';

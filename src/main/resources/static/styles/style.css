@@ -601,18 +601,20 @@ a{
     text-align: center;
 }
 
-.menu-header-administrator-odd{
-    display: grid;
-    grid-template-columns: 20% 50% 20%;
-    font-size: 25px;
+.menu-header-administrator-odd, .menu-header-administrator-even{
     padding-bottom: 30px;
 }
-
-.menu-header-administrator-even{
+.menu-header-administrator-odd, .menu-header-administrator-form, .menu-header-administrator-even{
     display: grid;
-    grid-template-columns: 15% 39% 20%;
     font-size: 25px;
-    padding-bottom: 30px;
+}
+
+ .style-form-odd{
+    grid-template-columns: 20% 50% 20%;
+}
+
+.style-form-even{
+    grid-template-columns: 15% 39% 20%;
 }
 
 .grid-menu-and-dishes-odd{
