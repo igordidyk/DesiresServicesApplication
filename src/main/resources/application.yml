@@ -11,3 +11,10 @@ spring:
       ddl-auto: update
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
+
+  thymeleaf:
+    cache: false
+    servlet:
+      content-type: text/html
+    enable-spring-el-compiler: true
+
