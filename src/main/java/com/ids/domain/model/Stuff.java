@@ -18,8 +18,6 @@ public class Stuff extends AuditModel{
     @Column(name = "stuff_id")
     private Long id;
 
-    private boolean isAdmin;
-
     @Column(name = "first_name",nullable = false)
     private String name;
 
