@@ -20,11 +20,11 @@
                 </header>
                 <div class="content">
                     <nav class="navigation-administrator">
-                        <a th:href="@{/#admin}"><div class="item-menu item-bg">Замовлення</div></a>
-                        <a th:href="@{/#workers-list}"><div class="item-menu">Працівники</div></a>
-                        <a th:href="@{/#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                        <a th:href="@{/#menu-administrator}"><div class="item-menu">Меню</div></a>
-                        <a th:href="@{/#statistics}"><div class="item-menu">Статистика</div></a>
+                        <a th:href="@{#admin}"><div class="item-menu item-bg">Замовлення</div></a>
+                        <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
+                        <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
+                        <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                        <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                     </nav>
                     <h1 class="header-page">Замовлення</h1>
                     <div class="main-content-menu-dishes">
@@ -60,72 +60,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="grid-for-order order">
-                            <div class="order-admin-odd">
-                                <div class="btn-order">
-                                    <button class="triangle style-triangle-left"></button>
-                                </div>
-                                <div class="grid-order-text">
-                                    <div class="grid-order-text-header">
-                                        <h2 class="header-page">Столик 3</h2>
-                                    </div>
-                                    <div class="grid-sum">
-                                        <p>Сума</p>
-                                        <div id="sum-table-third"></div>
-                                        <button class="btn-end-page">Розрахувати</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order-admin-even">
-                                <div class="grid-order-text">
-                                    <div class="grid-order-text-header">
-                                        <h2 class="header-page">Столик 4</h2>
-                                    </div>
-                                    <div class="grid-sum">
-                                        <p>Сума</p>
-                                        <div id="sum-table-fourth"></div>
-                                        <button class="btn-end-page">Розрахувати</button>
-                                    </div>
-                                </div>
-                                <div class="btn-order">
-                                    <button class="triangle style-triangle-right"></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid-for-order order">
-                            <div class="order-admin-odd">
-                                <div class="btn-order">
-                                    <button class="triangle style-triangle-left"></button>
-                                </div>
-                                <div class="grid-order-text">
-                                    <div class="grid-order-text-header">
-                                        <h2 class="header-page">Столик 5</h2>
-                                    </div>
-                                    <div class="grid-sum">
-                                        <p>Сума</p>
-                                        <div id="sum-table-fifth"></div>
-                                        <button class="btn-end-page">Розрахувати</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="order-admin-even">
-                                <div class="grid-order-text">
-                                    <div class="grid-order-text-header">
-                                        <h2 class="header-page">Столик 6</h2>
-                                    </div>
-                                    <div class="grid-sum">
-                                        <p>Сума</p>
-                                        <div id="sum-table-sixth"></div>
-                                        <button class="btn-end-page">Розрахувати</button>
-                                    </div>
-                                </div>
-                                <div class="btn-order">
-                                    <button class="triangle style-triangle-right"></button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -145,17 +79,18 @@
                 </header>
                 <div class="content">
                     <nav class="navigation-administrator">
-                        <a th:href="@{/#admin}"><div class="item-menu item-bg">Замовлення</div></a>
-                        <a th:href="@{/#workers-list}"><div class="item-menu">Працівники</div></a>
-                        <a th:href="@{/#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                        <a th:href="@{/#menu-administrator}"><div class="item-menu">Меню</div></a>
-                        <a th:href="@{/#statistics}"><div class="item-menu">Статистика</div></a>
+                        <a th:href="@{#admin}"><div class="item-menu item-bg">Замовлення</div></a>
+                        <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
+                        <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
+                        <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                        <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                     </nav>
+
 
                     <div class="main-content-workers-list">
                         <nav class="navigation-workers-list">
-                            <a th:href="@{/#workers-list}"><div class="bg-for-nav">Список</div></a>
-                            <a th:href="@{/#workers-schedule}"><div class="schedule-class">Розклад</div></a>
+                            <a th:href="@{#workers-list}"><div class="bg-for-nav">Список</div></a>
+                            <a th:href="@{#workers-schedule}"><div class="schedule-class">Розклад</div></a>
                         </nav>
                         <div class="bg-for-content">
                             <h1 class="header-page header-workers">Список</h1>
@@ -163,7 +98,7 @@
                                 <form class="grid-add-new-workers" method="post" th:action="@{/admin/addEmployee}">
                                     <input id="add-stuff" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers">
                                     <input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number">
-                                    <button class="btn-add" type="submit" disabled><img src="../static/img/add.png" alt="add" class="add-img"></button>
+                                    <button class="btn-add" type="submit" disabled><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>
                                     <div class="list-of-workers"></div>
                                 </form>
                             </div>
@@ -187,17 +122,17 @@
                 </header>
                 <div class="content">
                     <nav class="navigation-administrator">
-                        <a th:href="@{/#admin}"><div class="item-menu item-bg">Замовлення</div></a>
-                        <a th:href="@{/#workers-list}"><div class="item-menu">Працівники</div></a>
-                        <a th:href="@{/#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                        <a th:href="@{/#menu-administrator}"><div class="item-menu">Меню</div></a>
-                        <a th:href="@{/#statistics}"><div class="item-menu">Статистика</div></a>
+                        <a th:href="@{#admin}"><div class="item-menu item-bg">Замовлення</div></a>
+                        <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
+                        <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
+                        <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                        <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                     </nav>
 
                     <div class="main-content-workers-list">
                         <nav class="navigation-workers-list">
-                            <a th:href="@{/#workers-list}"><div class="bg-for-nav">Список</div></a>
-                            <a th:href="@{/#workers-schedule}"><div class="schedule-class">Розклад</div></a>
+                            <a th:href="@{#workers-list}"><div class="bg-for-nav">Список</div></a>
+                            <a th:href="@{#workers-schedule}"><div class="schedule-class">Розклад</div></a>
                         </nav>
                         <div class="bg-for-content">
                             <div class="grid-header-schedule header-workers">
@@ -214,7 +149,7 @@
                                 </div>
                             </div>
                             <div class="grid-for-schedule">
-                                <button class="btn-add-new text-workers"><img src="@{/img/add.png}" alt="add" class="add-new"></button>
+                                <button class="btn-add-new text-workers"><img th:src="@{/img/add.png}" alt="add" class="add-new"></button>
                                 <div class="text-workers">
                                     <div>Прізвище Ім'я</div>
                                 </div>
@@ -239,19 +174,19 @@
             <div class="grid-all">
                 <header class="header-for-all">
                     <div class="grid-header">
-                        <div><img src="../static/img/logo.png" alt="logo"></div>
+                        <div><img th:src="@{/img/logo.png}" alt="logo"></div>
                         <div class="header-log">
-                            <div><a th:href="index.html">Вихід</a></div>
+                            <div><a th:href="@{/}">Вихід</a></div>
                         </div>
                     </div>
                 </header>
                 <div class="content">
                     <nav class="navigation-administrator">
-                        <a th:href="@{/#admin}"><div class="item-menu item-bg">Замовлення</div></a>
-                        <a th:href="@{/#workers-list}"><div class="item-menu">Працівники</div></a>
-                        <a th:href="@{/#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                        <a th:href="@{/#menu-administrator}"><div class="item-menu">Меню</div></a>
-                        <a th:href="@{/#statistics}"><div class="item-menu">Статистика</div></a>
+                        <a th:href="@{#admin}"><div class="item-menu item-bg">Замовлення</div></a>
+                        <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
+                        <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
+                        <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                        <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                     </nav>
                     <h1 class="header-page">Резервація столика</h1>
                     <div class="main-content-reservation">
@@ -279,11 +214,11 @@
                 </header>
                 <div class="content">
                     <nav class="navigation-administrator">
-                        <a th:href="@{/#admin}"><div class="item-menu item-bg">Замовлення</div></a>
-                        <a th:href="@{/#workers-list}"><div class="item-menu">Працівники</div></a>
-                        <a th:href="@{/#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                        <a th:href="@{/#menu-administrator}"><div class="item-menu">Меню</div></a>
-                        <a th:href="@{/#statistics}"><div class="item-menu">Статистика</div></a>
+                        <a th:href="@{#admin}"><div class="item-menu item-bg">Замовлення</div></a>
+                        <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
+                        <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
+                        <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                        <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                     </nav>
                     <h1 class="header-page">Меню</h1>
                     <div class="main-content-menu-dishes">
@@ -312,10 +247,10 @@
 
                             <div class="menu-center-even">
                                 <h2 class="menu-header-administrator menu-header-administrator-even">
-                                    <!--<form class="menu-header-administrator-form style-form-even">-->
+                                    <form class="menu-header-administrator-form style-form-even">
                                         <div></div>
                                         <input type="text" id="salad" placeholder="Тип страви" class="input-title">
-                                        <button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>
+                                        <button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>
                                     </form>
                                 </h2>
                                 <div class="grid-menu-and-dishes-even">
@@ -332,11 +267,11 @@
                                         </div>
                                     </div>
                                     <nav class="navigation-administrator-menu">
-                                        <a th:href="@{/#menu-administrator}"><div class="pizza item-margin item-bg"></div></a>
-                                        <a th:href="@{/#cold-dish}"><div class="dish-hot-cold item-nav-admin-even"></div></a>
-                                        <a th:href="@{/#soup}"><div class="soup-hot item-nav-admin-even"></div></a>
-                                        <a th:href="@{/#pancakes}"><div class="pancakes-desserts item-nav-admin-even"></div></a>
-                                        <a th:href="@{/#non-alcoholic}"><div class="alco-and-non item-nav-admin-even"></div></a>
+                                        <a th:href="@{#menu-administrator}"><div class="pizza item-margin item-bg"></div></a>
+                                        <a th:href="@{#cold-dish}"><div class="dish-hot-cold item-nav-admin-even"></div></a>
+                                        <a th:href="@{#soup}"><div class="soup-hot item-nav-admin-even"></div></a>
+                                        <a th:href="@{#pancakes}"><div class="pancakes-desserts item-nav-admin-even"></div></a>
+                                        <a th:href="@{#non-alcoholic}"><div class="alco-and-non item-nav-admin-even"></div></a>
                                     </nav>
                                 </div>
                             </div>
@@ -346,330 +281,6 @@
             </div>
         </div>
     </div>
-
-    <!--<div class="anonymous" id="cold-dish">-->
-        <!--<div class="center">-->
-            <!--<div class="grid-all">-->
-                <!--<header class="header-for-all">-->
-                    <!--<div class="grid-header">-->
-                        <!--<div><img src="../static/img/logo.png" alt="logo"></div>-->
-                        <!--<div class="header-log">-->
-                            <!--<div><a th:href="index.html">Вихід</a></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</header>-->
-                <!--<div class="content">-->
-                    <!--<nav class="navigation-administrator">-->
-                        <!--<a th:href="#admin"><div class="item-menu">Замовлення</div></a>-->
-                        <!--<a th:href="#workers-list"><div class="item-menu">Працівники</div></a>-->
-                        <!--<a th:href="#reservation-administrator"><div class="item-menu">Резервація</div></a>-->
-                        <!--<a th:href="#menu-administrator"><div class="item-menu item-bg">Меню</div></a>-->
-                        <!--<a th:href="#statistics"><div class="item-menu">Статистика</div></a>-->
-                    <!--</nav>-->
-                    <!--<h1 class="header-page">Меню</h1>-->
-                    <!--<div class="main-content-menu-dishes">-->
-                        <!--<div class="grid-all-content-administrator">-->
-                            <!--<div class="menu-center-odd">-->
-                                <!--<h2 class="menu-header-administrator menu-header-administrator-odd">-->
-                                    <!--<form class="menu-header-administrator-form style-form-odd">-->
-                                        <!--<div></div>-->
-                                        <!--<input type="text" id="cold" placeholder="Тип страви" class="input-title">-->
-                                        <!--<button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>-->
-                                    <!--</form>-->
-                                <!--</h2>-->
-                                <!--<div class="grid-menu-and-dishes-odd">-->
-                                    <!--<div class="grid-for-item-menu">-->
-                                        <!--<div class="grid-menu-administrator">-->
-                                            <!--<div class="name-of-dish">Назва</div>-->
-                                            <!--<div class="name-of-dish">Склад</div>-->
-                                            <!--<div class="name-of-dish">Вага, г</div>-->
-                                            <!--<div class="name-of-dish">Ціна, грн</div>-->
-                                            <!--<div></div>-->
-                                        <!--</div>-->
-                                        <!--<div class="list-of-dish"></div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                            <!--<div class="menu-center-even">-->
-                                <!--<h2 class="menu-header-administrator menu-header-administrator-even">-->
-                                    <!--<form class="menu-header-administrator-form style-form-even">-->
-                                        <!--<div></div>-->
-                                        <!--<input type="text" id="hot" placeholder="Тип страви" class="input-title">-->
-                                        <!--<button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>-->
-                                    <!--</form>-->
-                                <!--</h2>-->
-                                <!--<div class="grid-menu-and-dishes-even">-->
-                                    <!--<div>-->
-                                        <!--<div class="grid-for-item-menu">-->
-                                            <!--<div class="grid-menu-administrator">-->
-                                                <!--<div class="name-of-dish">Назва</div>-->
-                                                <!--<div class="name-of-dish">Склад</div>-->
-                                                <!--<div class="name-of-dish">Вага, г</div>-->
-                                                <!--<div class="name-of-dish">Ціна, грн</div>-->
-                                                <!--<div></div>-->
-                                            <!--</div>-->
-                                            <!--<div class="list-of-dish"></div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<nav class="navigation-administrator-menu">-->
-                                        <!--<a th:href="#menu-administrator"><div class="pizza item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#cold-dish"><div class="dish-hot-cold item-margin item-bg"></div></a>-->
-                                        <!--<a th:href="#soup"><div class="soup-hot item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#pancakes"><div class="pancakes-desserts item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#non-alcoholic"><div class="alco-and-non item-nav-admin-even"></div></a>-->
-                                    <!--</nav>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="anonymous" id="soup">-->
-        <!--<div class="center">-->
-            <!--<div class="grid-all">-->
-                <!--<header class="header-for-all">-->
-                    <!--<div class="grid-header">-->
-                        <!--<div><img src="../static/img/logo.png" alt="logo"></div>-->
-                        <!--<div class="header-log">-->
-                            <!--<div><a th:href="index.html">Вихід</a></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</header>-->
-                <!--<div class="content">-->
-                    <!--<nav class="navigation-administrator">-->
-                        <!--<a th:href="#admin"><div class="item-menu">Замовлення</div></a>-->
-                        <!--<a th:href="#workers-list"><div class="item-menu">Працівники</div></a>-->
-                        <!--<a th:href="#reservation-administrator"><div class="item-menu">Резервація</div></a>-->
-                        <!--<a th:href="#menu-administrator"><div class="item-menu item-bg">Меню</div></a>-->
-                        <!--<a th:href="#statistics"><div class="item-menu">Статистика</div></a>-->
-                    <!--</nav>-->
-                    <!--<h1 class="header-page">Меню</h1>-->
-                    <!--<div class="main-content-menu-dishes">-->
-                        <!--<div class="grid-all-content-administrator">-->
-                            <!--<div class="menu-center-odd">-->
-                                <!--<h2 class="menu-header-administrator menu-header-administrator-odd">-->
-                                    <!--<form class="menu-header-administrator-form style-form-odd">-->
-                                        <!--<div></div>-->
-                                        <!--<input type="text" id="soup-hot-other" placeholder="Тип страви" class="input-title">-->
-                                        <!--<button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>-->
-                                    <!--</form>-->
-                                <!--</h2>-->
-                                <!--<div class="grid-menu-and-dishes-odd">-->
-                                    <!--<div class="grid-for-item-menu">-->
-                                        <!--<div class="grid-menu-administrator">-->
-                                            <!--<div class="name-of-dish">Назва</div>-->
-                                            <!--<div class="name-of-dish">Склад</div>-->
-                                            <!--<div class="name-of-dish">Вага, г</div>-->
-                                            <!--<div class="name-of-dish">Ціна, грн</div>-->
-                                            <!--<div></div>-->
-                                        <!--</div>-->
-                                        <!--<div class="list-of-dish"></div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                            <!--<div class="menu-center-even">-->
-                                <!--<h2 class="menu-header-administrator menu-header-administrator-even">-->
-                                    <!--<form class="menu-header-administrator-form style-form-even">-->
-                                        <!--<div></div>-->
-                                        <!--<input type="text" id="hot-other" placeholder="Тип страви" class="input-title">-->
-                                        <!--<button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>-->
-                                    <!--</form>-->
-                                <!--</h2>-->
-                                <!--<div class="grid-menu-and-dishes-even">-->
-                                    <!--<div>-->
-                                        <!--<div class="grid-for-item-menu">-->
-                                            <!--<div class="grid-menu-administrator">-->
-                                                <!--<div class="name-of-dish">Назва</div>-->
-                                                <!--<div class="name-of-dish">Склад</div>-->
-                                                <!--<div class="name-of-dish">Вага, г</div>-->
-                                                <!--<div class="name-of-dish">Ціна, грн</div>-->
-                                                <!--<div></div>-->
-                                            <!--</div>-->
-                                            <!--<div class="list-of-dish"></div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<nav class="navigation-administrator-menu">-->
-                                        <!--<a th:href="#menu-administrator"><div class="pizza item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#cold-dish"><div class="dish-hot-cold item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#soup"><div class="soup-hot item-margin item-bg"></div></a>-->
-                                        <!--<a th:href="#pancakes"><div class="pancakes-desserts item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#non-alcoholic"><div class="alco-and-non item-nav-admin-even"></div></a>-->
-                                    <!--</nav>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="anonymous" id="pancakes">-->
-        <!--<div class="center">-->
-            <!--<div class="grid-all">-->
-                <!--<header class="header-for-all">-->
-                    <!--<div class="grid-header">-->
-                        <!--<div><img src="../static/img/logo.png" alt="logo"></div>-->
-                        <!--<div class="header-log">-->
-                            <!--<div><a th:href="index.html">Вихід</a></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</header>-->
-                <!--<div class="content">-->
-                    <!--<nav class="navigation-administrator">-->
-                        <!--<a th:href="#admin"><div class="item-menu">Замовлення</div></a>-->
-                        <!--<a th:href="#workers-list"><div class="item-menu">Працівники</div></a>-->
-                        <!--<a th:href="#reservation-administrator"><div class="item-menu">Резервація</div></a>-->
-                        <!--<a th:href="#menu-administrator"><div class="item-menu item-bg">Меню</div></a>-->
-                        <!--<a th:href="#statistics"><div class="item-menu">Статистика</div></a>-->
-                    <!--</nav>-->
-                    <!--<h1 class="header-page">Меню</h1>-->
-                    <!--<div class="main-content-menu-dishes">-->
-                        <!--<div class="grid-all-content-administrator">-->
-                            <!--<div class="menu-center-odd">-->
-                                <!--<h2 class="menu-header-administrator menu-header-administrator-odd">-->
-                                    <!--<form class="menu-header-administrator-form style-form-odd">-->
-                                        <!--<div></div>-->
-                                        <!--<input type="text" id="pancakes-desert" placeholder="Тип страви" class="input-title">-->
-                                        <!--<button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>-->
-                                    <!--</form>-->
-                                <!--</h2>-->
-                                <!--<div class="grid-menu-and-dishes-odd">-->
-                                    <!--<div class="grid-for-item-menu">-->
-                                        <!--<div class="grid-menu-administrator">-->
-                                            <!--<div class="name-of-dish">Назва</div>-->
-                                            <!--<div class="name-of-dish">Склад</div>-->
-                                            <!--<div class="name-of-dish">Вага, г</div>-->
-                                            <!--<div class="name-of-dish">Ціна, грн</div>-->
-                                            <!--<div></div>-->
-                                        <!--</div>-->
-                                        <!--<div class="list-of-dish"></div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                            <!--<div class="menu-center-even">-->
-                                <!--<h2 class="menu-header-administrator menu-header-administrator-even">-->
-                                    <!--<form class="menu-header-administrator-form style-form-even">-->
-                                        <!--<div></div>-->
-                                        <!--<input type="text" id="desert" placeholder="Тип страви" class="input-title">-->
-                                        <!--<button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>-->
-                                    <!--</form>-->
-                                <!--</h2>-->
-                                <!--<div class="grid-menu-and-dishes-even">-->
-                                    <!--<div>-->
-                                        <!--<div class="grid-for-item-menu">-->
-                                            <!--<div class="grid-menu-administrator">-->
-                                                <!--<div class="name-of-dish">Назва</div>-->
-                                                <!--<div class="name-of-dish">Склад</div>-->
-                                                <!--<div class="name-of-dish">Вага, г</div>-->
-                                                <!--<div class="name-of-dish">Ціна, грн</div>-->
-                                                <!--<div></div>-->
-                                            <!--</div>-->
-                                            <!--<div class="list-of-dish"></div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<nav class="navigation-administrator-menu">-->
-                                        <!--<a th:href="#menu-administrator"><div class="pizza item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#cold-dish"><div class="dish-hot-cold item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#soup"><div class="soup-hot item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#pancakes"><div class="pancakes-desserts item-margin item-bg"></div></a>-->
-                                        <!--<a th:href="#non-alcoholic"><div class="alco-and-non item-nav-admin-even"></div></a>-->
-                                    <!--</nav>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="anonymous" id="non-alcoholic">-->
-        <!--<div class="center">-->
-            <!--<div class="grid-all">-->
-                <!--<header class="header-for-all">-->
-                    <!--<div class="grid-header">-->
-                        <!--<div><img src="../static/img/logo.png" alt="logo"></div>-->
-                        <!--<div class="header-log">-->
-                            <!--<div><a th:href="index.html">Вихід</a></div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</header>-->
-                <!--<div class="content">-->
-                    <!--<nav class="navigation-administrator">-->
-                        <!--<a th:href="#admin"><div class="item-menu">Замовлення</div></a>-->
-                        <!--<a th:href="#workers-list"><div class="item-menu">Працівники</div></a>-->
-                        <!--<a th:href="#reservation-administrator"><div class="item-menu">Резервація</div></a>-->
-                        <!--<a th:href="#menu-administrator"><div class="item-menu item-bg">Меню</div></a>-->
-                        <!--<a th:href="#statistics"><div class="item-menu">Статистика</div></a>-->
-                    <!--</nav>-->
-                    <!--<h1 class="header-page">Меню</h1>-->
-                    <!--<div class="main-content-menu-dishes">-->
-                        <!--<div class="grid-all-content-administrator">-->
-                            <!--<div class="menu-center-odd">-->
-                                <!--<h2 class="menu-header-administrator menu-header-administrator-odd">-->
-                                    <!--<form class="menu-header-administrator-form style-form-odd">-->
-                                        <!--<div></div>-->
-                                        <!--<input type="text" id="non-alco" placeholder="Тип страви" class="input-title">-->
-                                        <!--<button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>-->
-                                    <!--</form>-->
-                                <!--</h2>-->
-                                <!--<div class="grid-menu-and-dishes-odd">-->
-                                    <!--<div class="grid-for-item-menu">-->
-                                        <!--<div class="grid-menu-administrator">-->
-                                            <!--<div class="name-of-dish">Назва</div>-->
-                                            <!--<div class="name-of-dish">Склад</div>-->
-                                            <!--<div class="name-of-dish">Вага, г</div>-->
-                                            <!--<div class="name-of-dish">Ціна, грн</div>-->
-                                            <!--<div></div>-->
-                                        <!--</div>-->
-                                        <!--<div class="list-of-dish"></div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                            <!--<div class="menu-center-even">-->
-                                <!--<h2 class="menu-header-administrator menu-header-administrator-even">-->
-                                    <!--<form class="menu-header-administrator-form style-form-even">-->
-                                        <!--<div></div>-->
-                                        <!--<input type="text" id="alco" placeholder="Тип страви" class="input-title">-->
-                                        <!--<button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>-->
-                                    <!--</form>-->
-                                <!--</h2>-->
-                                <!--<div class="grid-menu-and-dishes-even">-->
-                                    <!--<div>-->
-                                        <!--<div class="grid-for-item-menu">-->
-                                            <!--<div class="grid-menu-administrator">-->
-                                                <!--<div class="name-of-dish">Назва</div>-->
-                                                <!--<div class="name-of-dish">Склад</div>-->
-                                                <!--<div class="name-of-dish">Вага, г</div>-->
-                                                <!--<div class="name-of-dish">Ціна, грн</div>-->
-                                                <!--<div></div>-->
-                                            <!--</div>-->
-                                            <!--<div class="list-of-dish"></div>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                    <!--<nav class="navigation-administrator-menu">-->
-                                        <!--<a th:href="#menu-administrator"><div class="pizza item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#cold-dish"><div class="dish-hot-cold item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#soup"><div class="soup-hot item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#pancakes"><div class="pancakes-desserts item-nav-admin-even"></div></a>-->
-                                        <!--<a th:href="#non-alcoholic"><div class="alco-and-non item-margin item-bg"></div></a>-->
-                                    <!--</nav>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
 
     <div class="anonymous" id="statistics">
         <div class="center">
@@ -684,11 +295,11 @@
                 </header>
                 <div class="content">
                     <nav class="navigation-administrator">
-                        <a th:href="@{/#admin}"><div class="item-menu item-bg">Замовлення</div></a>
-                        <a th:href="@{/#workers-list}"><div class="item-menu">Працівники</div></a>
-                        <a th:href="@{/#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                        <a th:href="@{/#menu-administrator}"><div class="item-menu">Меню</div></a>
-                        <a th:href="@{/#statistics}"><div class="item-menu">Статистика</div></a>
+                        <a th:href="@{#admin}"><div class="item-menu item-bg">Замовлення</div></a>
+                        <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
+                        <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
+                        <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                        <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                     </nav>
                     <h1 class="header-page">Статистика</h1>
                     <div class="main-content-statistics">
@@ -704,11 +315,11 @@
 
     <script th:src="@{/modules/moment.min.js}"></script>
     <script th:src="@{/modules/lightpick/lightpick.js}"></script>
-    <script th:src="@{/js/admin.js}"></script>
     <script th:src="@{/modules/jquery/jquery-3.1.1.min.js}"></script>
     <script th:src="@{/modules/highcharts/highcharts.js}"></script>
     <script th:src="@{/modules/highcharts/highcharts-more.js}"></script>
     <script th:src="@{/modules/highcharts/exporting.js}"></script>
+    <script th:src="@{/js/admin.js}"></script>
     <script th:src="@{/js/charts.js}"></script>
 </body>
 </html>
