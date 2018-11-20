@@ -286,11 +286,11 @@ a{
 }
 
 /*img add and delete*/
-.add-img, .delete-img, .add-img-admin{
+.add-img, .delete-img, .add-img-admin, .img-title-dish, .img-edit{
     width: 30px;
 }
 
-.btn-add, .delete-btn, .btn-add-new, .add-btn-admin, .delete-btn-menu{
+.btn-add, .delete-btn, .btn-add-new, .add-btn-admin, .delete-btn-menu, .btn-title-dish, .btn-edit{
     background: none;
     border: none;
 }
@@ -488,7 +488,83 @@ a{
     background: linear-gradient(to bottom, #9c6044, #efb69c);
 }
 
+/*order*/
+.style-triangle-left, .style-triangle-right{
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    background: none;
+}
+
+.style-triangle-left{
+    border-right: 30px solid #ae8c64;
+    border-left-width: 0;
+}
+
+.style-triangle-right{
+    border-left: 30px solid #ae8c64;
+    border-right-width: 0;
+}
+
+.grid-for-order{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 90px;
+    height: 500px;
+    grid-column-gap: 130px;
+}
+
+.btn-order{
+    display: grid;
+    align-items: center;
+}
+
+.order-admin-odd{
+    display: grid;
+    grid-template-columns: 10% 1fr;
+    grid-column-gap: 20px;
+}
+.order-admin-even{
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    grid-column-gap: 20px;
+}
+
+.grid-order-text-header {
+    display: grid;
+    height: 20px;
+    grid-row-gap: 20px;
+}
+
+.grid-order-text{
+    display: grid;
+    grid-template-rows: 480px 20px;
+}
+
+.grid-sum{
+    display: grid;
+    grid-template-columns: 15% 40% 33%;
+    grid-column-gap: 20px;
+    height: 25px;
+    align-items: center
+}
+
+.btn-end-page{
+    background: #ae8c64;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
 /*menu with dishes*/
+.dish-consist, .input-title{
+    resize: none;
+    border: 2px inset #EEEEEE;
+    border-radius: 5px;
+    padding: 5px;
+}
+
 .menu-center-odd{
     padding: 40px 40px 40px 100px;
 }
@@ -510,17 +586,35 @@ a{
     font-size: 12px;
 }
 
-.menu-header-administrator-odd{
+.common-div-edit{
+    grid-column: 1/ span 3;
+    display: grid;
+    grid-template-columns: 350px 1fr;
     text-align: center;
-    font-size: 25px;
-    padding-bottom: 30px;
 }
 
-.menu-header-administrator-even{
+.btn-edit{
+    width: 40px;
+}
+
+.menu-header-administrator{
     text-align: center;
-    font-size: 25px;
+}
+
+.menu-header-administrator-odd, .menu-header-administrator-even{
     padding-bottom: 30px;
-    width: 80%;
+}
+.menu-header-administrator-odd, .menu-header-administrator-form, .menu-header-administrator-even{
+    display: grid;
+    font-size: 25px;
+}
+
+ .style-form-odd{
+    grid-template-columns: 20% 50% 20%;
+}
+
+.style-form-even{
+    grid-template-columns: 15% 39% 20%;
 }
 
 .grid-menu-and-dishes-odd{
