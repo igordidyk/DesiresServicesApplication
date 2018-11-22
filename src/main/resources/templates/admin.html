@@ -96,11 +96,11 @@
                             <h1 class="header-page header-workers">Список</h1>
                             <div class="grid-add-center">
                                 <form class="grid-add-new-workers" method="post" th:action="@{/admin/addEmployee}">
-                                    <input id="add-stuff" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers">
-                                    <input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number">
+                                    <input id="add-stuff" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers"/>
+                                    <input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number"/>
                                     <button class="btn-add" type="submit" disabled><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>
-                                    <div class="list-of-workers"></div>
                                 </form>
+                                <!--<div class="list-of-workers"></div>-->
                             </div>
                         </div>
                     </div>
