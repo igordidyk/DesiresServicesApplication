@@ -11,8 +11,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "stuff")
-public class Stuff extends AuditModel{
+@Table(name = "employee")
+public class Employee extends AuditModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "stuff_id")

@@ -32,7 +32,7 @@ public class ClientTable extends AuditModel {
     private Client client;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "stuff_id", nullable = false)
-    private Stuff stuff;
+    @JoinColumn(name = "employee_id", nullable = false)
+    private Employee employee;
 
 }
