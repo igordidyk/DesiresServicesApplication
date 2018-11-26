@@ -95,12 +95,12 @@
                         <div class="bg-for-content">
                             <h1 class="header-page header-workers">Список</h1>
                             <div class="grid-add-center">
-                                <form class="grid-add-new-workers" method="post" th:action="@{/admin/addEmployee}">
-                                    <input id="add-stuff" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers"/>
+                                    <input id="fullName" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers"/>
                                     <input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number"/>
-                                    <button class="btn-add" type="submit" disabled><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>
-                                </form>
-                                <!--<div class="list-of-workers"></div>-->
+                                    <button class="btn-add" type="submit" disabled id="addEmployee"><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>
+                                    <button class="btn-add" type="submit"  id="getAll">Show</button>
+                                <div class="grid-add-new-workers list-of-workers" id="employeeList"></div>
+
                             </div>
                         </div>
                     </div>
@@ -313,7 +313,7 @@
         </div>
     </div>
 
-    <script th:src="@{/modules/moment.min.js}"></script>
+    <script th:src="@{/modules/moment/moment.min.js}"></script>
     <script th:src="@{/modules/lightpick/lightpick.js}"></script>
     <script th:src="@{/modules/jquery/jquery-3.1.1.min.js}"></script>
     <script th:src="@{/modules/highcharts/highcharts.js}"></script>
@@ -321,5 +321,6 @@
     <script th:src="@{/modules/highcharts/exporting.js}"></script>
     <script th:src="@{/js/admin.js}"></script>
     <script th:src="@{/js/charts.js}"></script>
+    <script th:src="@{/js/main.js}"></script>
 </body>
 </html>

@@ -29,55 +29,54 @@ function appendChildren(parent, children) {
 }
 
 //add list of workers
-let inputOnKey = document.querySelector('.add-new-workers');
-let inputNumber = document.querySelector('.add-new-workers-number');
-let btnOnClick = document.querySelector('.btn-add');
-let list = document.querySelector('.list-of-workers');
-
-inputOnKey.addEventListener('keyup', function () {
-    inputOnKey.value !== '' ? btnOnClick.disabled = false : btnOnClick.disabled = true;
-});
-
-inputNumber.addEventListener('keyup', function () {
-    inputNumber.value !== '' ? btnOnClick.disabled = false : btnOnClick.disabled = true;
-});
-
-let scheduleList = document.querySelector('.list-text-workers');
-let variable = [];
-
-btnOnClick.addEventListener('click', function () {
-    let divEl = document.createElement('div');
-    divEl.setAttribute('class', 'text-workers list-workers-for-remove');
-    divEl.appendChild(document.createTextNode(inputOnKey.value));
-
-    let divElNumber = document.createElement('div');
-    divElNumber.setAttribute('class', 'text-workers list-workers-for-remove');
-    divElNumber.appendChild(document.createTextNode(inputNumber.value));
-
-    let btnDeleteEl = document.createElement('button');
-    btnDeleteEl.setAttribute('class', 'delete-btn');
-    let imgDeleteEl = document.createElement('img');
-    setAttributes(imgDeleteEl, {'src': '../static/img/delete.png', 'class': 'delete-img'});
-    btnDeleteEl.appendChild(imgDeleteEl);
-
-    let commonDiv = document.createElement('div');
-    commonDiv.setAttribute('class', 'common-div');
-    appendChildren(commonDiv, {divEl, divElNumber, btnDeleteEl});
-
-    list.appendChild(commonDiv);
-    btnDeleteEl.addEventListener('click', function () {
-        commonDiv.remove();
-        let elAll = document.querySelectorAll('.list-workers-for-remove');
-        variable = [];
-        for (let i = 0; i < elAll.length; i++) {
-            variable.push(elAll[i].innerText);
-        }
-    });
-    variable.push(inputOnKey.value);
-    inputOnKey.value = '';
-    inputNumber.value = '';
-    btnOnClick.disabled = true;
-});
+// let inputOnKey = document.querySelector('.add-new-workers');
+// let inputNumber = document.querySelector('.add-new-workers-number');
+// let btnOnClick = document.querySelector('.btn-add');
+// let list = document.querySelector('.list-of-workers');
+//
+// inputOnKey.addEventListener('keyup', function () {
+//     inputOnKey.value !== '' ? btnOnClick.disabled = false : btnOnClick.disabled = true;
+// });
+//
+// inputNumber.addEventListener('keyup', function () {
+//     inputNumber.value !== '' ? btnOnClick.disabled = false : btnOnClick.disabled = true;
+// });
+// let scheduleList = document.querySelector('.list-text-workers');
+// let variable = [];
+//
+// btnOnClick.addEventListener('click', function () {
+//     let divEl = document.createElement('div');
+//     divEl.setAttribute('class', 'text-workers list-workers-for-remove');
+//     divEl.appendChild(document.createTextNode(inputOnKey.value));
+//
+//     let divElNumber = document.createElement('div');
+//     divElNumber.setAttribute('class', 'text-workers list-workers-for-remove');
+//     divElNumber.appendChild(document.createTextNode(inputNumber.value));
+//
+//     let btnDeleteEl = document.createElement('button');
+//     btnDeleteEl.setAttribute('class', 'delete-btn');
+//     let imgDeleteEl = document.createElement('img');
+//     setAttributes(imgDeleteEl, {'src': '../static/img/delete.png', 'class': 'delete-img'});
+//     btnDeleteEl.appendChild(imgDeleteEl);
+//
+//     let commonDiv = document.createElement('div');
+//     commonDiv.setAttribute('class', 'common-div');
+//     appendChildren(commonDiv, {divEl, divElNumber, btnDeleteEl});
+//
+//     list.appendChild(commonDiv);
+//     btnDeleteEl.addEventListener('click', function () {
+//         commonDiv.remove();
+//         let elAll = document.querySelectorAll('.list-workers-for-remove');
+//         variable = [];
+//         for (let i = 0; i < elAll.length; i++) {
+//             variable.push(elAll[i].innerText);
+//         }
+//     });
+//     variable.push(inputOnKey.value);
+//     inputOnKey.value = '';
+//     inputNumber.value = '';
+//     btnOnClick.disabled = true;
+// });
 
 //schedule
 let btnOnClickNew = document.querySelector('.btn-add-new');

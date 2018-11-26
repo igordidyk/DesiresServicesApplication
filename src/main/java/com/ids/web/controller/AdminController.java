@@ -1,18 +1,22 @@
 package com.ids.web.controller;
 
+import com.ids.domain.model.Employee;
 import com.ids.service.EmployeeService;
 import com.ids.web.dto.EmployeeDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Controller
 @RequestMapping("/admin")
-@Slf4j
 @RequiredArgsConstructor
 public class AdminController {
 
@@ -22,14 +26,6 @@ public class AdminController {
     public String toAdmin(){
         return "admin";
     }
-
-    @PostMapping("/addEmployee")
-    public String add(@RequestParam String fullName, @RequestParam String phone){
-        employeeService.addEmployee(new EmployeeDTO(fullName.split(" ")[0], fullName.split(" ")[1], phone));
-        log.info("Employee:  {} - {} was added", fullName, phone);
-        return "redirect:/admin#workers-list";
-    }
-
 
 
 }
