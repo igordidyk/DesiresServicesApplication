@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class Employee extends AuditModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "stuff_id")
+    @Column(name = "employee_id")
     private Long id;
 
     @Column(name = "first_name",nullable = false)
