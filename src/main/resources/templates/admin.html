@@ -86,7 +86,6 @@
                         <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                     </nav>
 
-
                     <div class="main-content-workers-list">
                         <nav class="navigation-workers-list">
                             <a th:href="@{#workers-list}"><div class="bg-for-nav">Список</div></a>
@@ -95,12 +94,12 @@
                         <div class="bg-for-content">
                             <h1 class="header-page header-workers">Список</h1>
                             <div class="grid-add-center">
+                                <div class="grid-add-new-workers">
                                     <input id="fullName" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers"/>
                                     <input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number"/>
                                     <button class="btn-add" type="submit" disabled id="addEmployee"><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>
-                                    <button class="btn-add" type="submit"  id="getAll">Show</button>
-                                <div class="grid-add-new-workers list-of-workers" id="employeeList"></div>
-
+                                    <div class="list-of-workers" id="employeeList"></div>
+                                </div>
                             </div>
                         </div>
                     </div>

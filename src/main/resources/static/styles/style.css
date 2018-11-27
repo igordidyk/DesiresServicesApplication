@@ -350,6 +350,8 @@ a{
 
 .delete-btn{
     grid-column: 3;
+    background: url('../img/delete.png') center center no-repeat;
+    background-size: 30px;
 }
 
 /*workers schedule*/
