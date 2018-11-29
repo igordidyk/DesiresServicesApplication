@@ -175,6 +175,18 @@ for(let i = 0; i < logIn.length; i++){
     }
 }
 
+blockForm.addEventListener('click', e => {
+    e.target.style.display = 'none';
+    formLogIn.style.display = 'grid';
+    closeForm.style.display = 'grid';
+    hEl.style.display = 'grid';
+    formP1.style.display = 'grid';
+    formInput1.style.display = 'grid';
+    formP2.style.display = 'grid';
+    formInput2.style.display = 'grid';
+    formSubmit.style.display = 'grid';
+});
+
 //add form for sign up
 let blockFormSignUp = document.createElement('div');
 blockFormSignUp.setAttribute('class', 'block-form');
@@ -275,3 +287,19 @@ for(let i = 0; i < signUp.length; i++){
         }
     }
 }
+
+blockFormSignUp.addEventListener('click', e => {
+    e.target.style.display = 'none';
+    formSignUp.style.display = 'grid';
+    closeFormSignUp.style.display = 'grid';
+    hEl2.style.display = 'grid';
+    signUpFormP1.style.display = 'grid';
+    signUpFormInput1.style.display = 'grid';
+    signUpFormP2.style.display = 'grid';
+    signUpFormInput2.style.display = 'grid';
+    signUpFormP3.style.display = 'grid';
+    signUpFormInput3.style.display = 'grid';
+    signUpFormP4.style.display = 'grid';
+    signUpFormInput4.style.display = 'grid';
+    signUpFormFormSubmit.style.display = 'grid';
+});
