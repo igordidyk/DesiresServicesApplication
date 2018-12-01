@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Administrator</title>
+    <link rel="stylesheet" type="text/css" media="screen" th:href="@{http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css}">
     <link rel="stylesheet" th:href="@{/styles/style.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/modules/lightpick/css/lightpick.css}">
 </head>
@@ -136,19 +137,10 @@
                         <div class="bg-for-content">
                             <div class="grid-header-schedule header-workers">
                                 <h1 class="header-page-schedule">Розклад</h1>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row">
-                                            <form class="col-md-5">
-                                                <input type="text" id="datepicker" class="form-control form-control-sm" placeholder="Date">
-                                            </form>
-                                            <div class="col-md-7" id="gist-2"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <input name="startDate" id="datepicker" class="date-picker form-control form-control-sm" placeholder="Date"/>
                             </div>
                             <div class="grid-for-schedule">
-                                <button class="btn-add-new text-workers"><img th:src="@{/img/add.png}" alt="add" class="add-new"></button>
+                                <button class="btn-add-new text-workers" id="get-employee-from-list"><img th:src="@{/img/add.png}" alt="add" class="add-new"></button>
                                 <div class="text-workers">
                                     <div>Прізвище Ім'я</div>
                                 </div>
@@ -312,9 +304,13 @@
         </div>
     </div>
 
-    <script th:src="@{/modules/moment/moment.min.js}"></script>
-    <script th:src="@{/modules/lightpick/lightpick.js}"></script>
-    <script th:src="@{/modules/jquery/jquery-3.1.1.min.js}"></script>
+    <script th:src="@{http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js}"></script>
+    <script th:src="@{/modules/datepicker/jQuery.UI.1.7.2.js}"></script>
+    <script th:src="@{/modules/datepicker/datepicker.js}"></script>
+    <script th:src="@{/modules/datepicker/datepicker-uk.js}"></script>
+    <!--<script th:src="@{/modules/moment/moment.min.js}"></script>-->
+    <!--<script th:src="@{/modules/lightpick/lightpick.js}"></script>-->
+    <!--<script th:src="@{/modules/jquery/jquery-3.1.1.min.js}"></script>-->
     <script th:src="@{/modules/highcharts/highcharts.js}"></script>
     <script th:src="@{/modules/highcharts/highcharts-more.js}"></script>
     <script th:src="@{/modules/highcharts/exporting.js}"></script>

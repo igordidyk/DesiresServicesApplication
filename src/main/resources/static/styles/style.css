@@ -382,6 +382,14 @@ a{
 }
 
 /*date*/
+.ui-datepicker-calendar tr:hover {
+    background-color: rgb(202, 165, 112);
+}
+
+.ui-datepicker {
+    width: 18em;
+}
+
 .card{
     margin: 10px;
 }
@@ -393,6 +401,9 @@ a{
     cursor: pointer;
     padding: 2px;
     box-shadow: 0 0 40px rgba(0, 0, 0, .1) inset;
+    width: 145px;
+    height: 20px;
+    margin-top: 5px;
 }
 
 .form-control::placeholder {
@@ -415,6 +426,11 @@ a{
 .delete-btn-schedule, .btn-add-new{
     height: 42px;
     padding: 5px;
+}
+
+.delete-btn-schedule {
+    background: url('../img/delete.png') center center no-repeat rgb(202, 165, 112);
+    background-size: 30px;
 }
 
 .add-new{
