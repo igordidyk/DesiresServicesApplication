@@ -6,7 +6,6 @@ let inputOnKey = document.querySelector('#fullName');
 let inputNumber = document.querySelector('#number');
 let list = document.querySelector('.list-of-workers');
 
-
 inputOnKey.addEventListener('keyup', function () {
     inputOnKey.value !== '' ? addEmployee.disabled = false : addEmployee.disabled = true;
 });
@@ -76,3 +75,82 @@ function getListWorker() {
         }
     });
 }
+
+let scheduleList = document.querySelector('.list-text-workers');
+let variable = [];
+let btnOnClickNew = document.querySelector('.btn-add-new');
+
+// let getWorkersFromWorkersList = document.querySelector('#get-employee-from-list');
+// getWorkersFromWorkersList.addEventListener('click', function () {
+//
+//     $.ajax({
+//         url:'/admin/getEmployeesList',
+//         type:'get',
+//         success:function (data) {
+//
+//
+//         },
+//         error:function () {
+//             console.log("Failed to show");
+//         }
+//     });
+// });
+
+btnOnClickNew.addEventListener('click', function () {
+    let surnameName = document.createElement('select');
+    surnameName.setAttribute('class', 'select-workers');
+    let btnDeleteElSchedule = document.createElement('button');
+    btnDeleteElSchedule.setAttribute('class', 'delete-btn-schedule text-workers');
+
+    btnDeleteElSchedule.addEventListener('click', function () {
+        commonDivForSchedule.remove();
+    });
+
+    let imgDeleteElSchedule = document.createElement('img');
+    setAttributes(imgDeleteElSchedule, {'class': 'delete-img-schedule'});
+    btnDeleteElSchedule.appendChild(imgDeleteElSchedule);
+
+    for (let i = 0; i < variable.length; i++) {
+        let optionSelect = document.createElement('option');
+        optionSelect.setAttribute('class','text-workers bg-option');
+        optionSelect.appendChild(document.createTextNode(variable[i]));
+        optionSelect.setAttribute('value', variable[i]);
+        surnameName.appendChild(optionSelect);
+    }
+
+    let commonDivForSchedule = document.createElement('div');
+    commonDivForSchedule.setAttribute('class', 'grid-for-schedule');
+
+    let arrayOfDays = [], imgCheckBox = [];
+    for (let i = 0; i < 7; i++) {
+        arrayOfDays[i] = 'day' + i;
+        imgCheckBox[i] = 'imgCheck' + i;
+    }
+
+    for (let i = 0; i < arrayOfDays.length; i++) {
+        arrayOfDays[i] = document.createElement('div');
+        arrayOfDays[i].setAttribute('class','text-workers text-workers-check');
+        listenerDayOfWeek(arrayOfDays[i]);
+    }
+
+    let counter = 0;
+    function listenerDayOfWeek(day) {
+        day.addEventListener('click', function () {
+            counter++;
+            if(counter === 1){
+                day.style.background = 'url(\'../img/check.png\') center center no-repeat rgb(202, 165, 112)';
+                day.style.backgroundSize = '30px';
+            }else {
+                day.style.background = 'none';
+                day.style.background = 'rgb(202, 165, 112)';
+                counter = 0;
+            }
+        });
+    }
+
+    appendChildren(commonDivForSchedule, {btnDeleteElSchedule, surnameName});
+    for (let i = 0; i < arrayOfDays.length; i++) {
+        commonDivForSchedule.appendChild(arrayOfDays[i]);
+    }
+    scheduleList.before(commonDivForSchedule);
+});
