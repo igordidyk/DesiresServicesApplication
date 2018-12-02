@@ -18,11 +18,8 @@ public class Employee extends AuditModel{
     @Column(name = "employee_id")
     private Long id;
 
-    @Column(name = "first_name",nullable = false)
-    private String name;
-
-    @Column(name = "second_name", nullable = false)
-    private String secondName;
+    @Column(name = "full_name",nullable = false)
+    private String fullName;
 
     @Column(name = "phone_number", unique = false, nullable = false)
     private String phoneNumber;

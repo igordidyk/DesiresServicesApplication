@@ -18,8 +18,7 @@ public class EmployeeService {
     @Transactional
     public void addEmployee(EmployeeDTO dto){
         employeeRepository.save(Employee.builder()
-                                        .name(dto.getName())
-                                        .secondName(dto.getSecondName())
+                                        .fullName(dto.getFullName())
                                         .phoneNumber(dto.getPhoneNumber())
                                         .build());
     }

@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class EmployeeDTO {
-    private String name;
-    private String secondName;
+    private String fullName;
     private String phoneNumber;
 }

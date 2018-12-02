@@ -22,14 +22,7 @@ public class RequestController {
     @PostMapping("/admin/addEmployee")
     public void add(@RequestBody EmployeeDTO employee){
         employeeService.addEmployee(employee);
-        log.info("Employee: {} {} - {}  added successfully!", employee.getName(), employee.getSecondName(), employee.getPhoneNumber());
-    }
-
-
-    @GetMapping("/admin/getEmployees")
-    public List<Employee> getAll(){
-        log.info("All employees in database: {}", employeeService.getAll().size() );
-        return employeeService.getAll();
+        log.info("Employee: {} {} - {}  added successfully!", employee.getFullName(), employee.getPhoneNumber());
     }
 
 }
