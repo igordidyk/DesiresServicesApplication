@@ -17,33 +17,60 @@ inputNumber.addEventListener('keyup', function () {
 let countNumber = 0;
 addEmployee.addEventListener('click', function () {
     countNumber = 0;
-    let employee = { fullName:inputOnKey.value,
-        phoneNumber:inputNumber.value
+    let employee = {
+        fullName: inputOnKey.value,
+        phoneNumber: inputNumber.value
     };
     console.log(employee);
     $.ajax({
-        url:'/admin/addEmployee',
-        type:'post',
-        data:JSON.stringify(employee),
-        contentType:'application/json',
-        success:function (data) {
+        url: '/admin/addEmployee',
+        type: 'post',
+        data: JSON.stringify(employee),
+        contentType: 'application/json',
+        success: function (data) {
             inputOnKey.value = '';
             inputNumber.value = '';
             addEmployee.disabled = true;
-            console.log("Employee "+ employee + " was added");
-            // getListWorker();
-            },
-        error:function () {
+            console.log("Employee " + employee + " was added");
+            window.location.reload();
+        },
+
+        error: function () {
             console.log("Failed to save");
         }
     });
 });
 
+
+let btnDeleteEl = document.querySelectorAll('#deleteEmployee');
+let commonDivDelete = document.querySelectorAll('.common-div');
+for (let i = 0; i < btnDeleteEl.length; i++) {
+    for (let j = 0; j < commonDivDelete.length; j++) {
+        btnDeleteEl[i].addEventListener('click', function (e) {
+            $.ajax({
+                url: '/admin/removeEmployee',
+                type: 'post',
+                contentType: 'application/json',
+                success: function () {
+
+                    if (e.target) {
+                        if (i === j) {
+                            commonDivDelete[j].remove();
+                        }
+                    }
+                },
+
+                error: function () {
+                    console.log("Failed to delete");
+                }
+            });
+        });
+    }
+}
+
 let scheduleList = document.querySelector('.list-text-workers');
 let variable = [];
 let btnOnClickNew = document.querySelector('.btn-add-new');
-
-
 btnOnClickNew.addEventListener('click', function () {
     let surnameName = document.createElement('select');
     surnameName.setAttribute('class', 'select-workers');
@@ -58,13 +85,22 @@ btnOnClickNew.addEventListener('click', function () {
     setAttributes(imgDeleteElSchedule, {'class': 'delete-img-schedule'});
     btnDeleteElSchedule.appendChild(imgDeleteElSchedule);
 
-    for (let i = 0; i < variable.length; i++) {
-        let optionSelect = document.createElement('option');
-        optionSelect.setAttribute('class','text-workers bg-option');
-        optionSelect.appendChild(document.createTextNode(variable[i]));
-        optionSelect.setAttribute('value', variable[i]);
-        surnameName.appendChild(optionSelect);
-    }
+    $.ajax({
+        url:'/admin/getEmployeesList',
+        type:'get',
+        success:function (data) {
+            for (let i = 0; i < data.length; i++) {
+                let optionSelect = document.createElement('option');
+                optionSelect.setAttribute('class', 'text-workers bg-option');
+                optionSelect.appendChild(document.createTextNode(data[i].fullName));
+                optionSelect.setAttribute('value', data[i].fullName);
+                surnameName.appendChild(optionSelect);
+            }
+        },
+        error:function () {
+            console.log("Failed to show");
+        }
+    });
 
     let commonDivForSchedule = document.createElement('div');
     commonDivForSchedule.setAttribute('class', 'grid-for-schedule');
@@ -77,18 +113,19 @@ btnOnClickNew.addEventListener('click', function () {
 
     for (let i = 0; i < arrayOfDays.length; i++) {
         arrayOfDays[i] = document.createElement('div');
-        arrayOfDays[i].setAttribute('class','text-workers text-workers-check');
+        arrayOfDays[i].setAttribute('class', 'text-workers text-workers-check');
         listenerDayOfWeek(arrayOfDays[i]);
     }
 
     let counter = 0;
+
     function listenerDayOfWeek(day) {
         day.addEventListener('click', function () {
             counter++;
-            if(counter === 1){
+            if (counter === 1) {
                 day.style.background = 'url(\'../img/check.png\') center center no-repeat rgb(202, 165, 112)';
                 day.style.backgroundSize = '30px';
-            }else {
+            } else {
                 day.style.background = 'none';
                 day.style.background = 'rgb(202, 165, 112)';
                 counter = 0;
@@ -104,16 +141,14 @@ btnOnClickNew.addEventListener('click', function () {
 });
 
 
-
-
 // let getWorkersFromWorkersList = document.querySelector('#get-employee-from-list');
 // getWorkersFromWorkersList.addEventListener('click', function () {
-//
+
 //     $.ajax({
 //         url:'/admin/getEmployeesList',
 //         type:'get',
 //         success:function (data) {
-//
+// let getListOf
 //
 //         },
 //         error:function () {
@@ -158,4 +193,3 @@ btnOnClickNew.addEventListener('click', function () {
 //         }
 //     });
 // }
-

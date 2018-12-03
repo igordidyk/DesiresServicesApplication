@@ -323,23 +323,12 @@ Element.prototype.makeDraggable = function () {
 
 let btnDragAndDrop = document.querySelector('.drag-and-drop');
 let btnDragAndDropNone = document.querySelector('.none-drag-and-drop');
-let divId = [], imgSprite = [];
-let idObj = [], sprite = [];
+let divId = [];
+let idObj = [];
 for (let i = 0; i < 15; i++) {
     divId[i] = 'object' + i;
-    imgSprite[i] = 'sprite' + i;
     idObj[i] = 'object' + i;
 }
-
-for (let i = 0; i < 10; i++) {
-    sprite[i] = '../static/img/sprite' + i + '.png';
-}
-
-sprite[10] = '../static/img/sprite7.png';
-sprite[11] = '../static/img/sprite8.png';
-sprite[12] = '../static/img/sprite8.png';
-sprite[13] = '../static/img/sprite9.png';
-sprite[14] = '../static/img/sprite9.png';
 
 let parent = document.getElementById('parent');
 let arrLeft = ['20px', '578px', '428px', '445px', '52px', '562px', '620px', '470px', '625px', '26px', '459px',
@@ -350,13 +339,9 @@ let arrTop = ['20px', '28px', '28px', '431px', '220px', '550px', '433px', '233px
 for (let i = 0; i < divId.length; i++) {
     divId[i] = document.createElement('div');
     divId[i].setAttribute('class', 'div-sprite');
-    imgSprite[i] = document.createElement('img');
-    imgSprite[i].setAttribute('class', 'img-sprite');
     divId[i].style.left = arrLeft[i];
     divId[i].style.top = arrTop[i];
     divId[i].setAttribute('id', idObj[i]);
-    imgSprite[i].setAttribute('src', sprite[i]);
-    divId[i].append(imgSprite[i]);
 
     btnDragAndDrop.addEventListener('click', function () {
         divId[i].makeDraggable();
@@ -368,8 +353,8 @@ for (let i = 0; i < divId.length; i++) {
     let counterLock = 0;
     divId[i].addEventListener('click', function (e) {
         if (counterLock === 0) {
-            let imgLock = document.createElement('img');
-            setAttributes(imgLock, {'src': '../static/img/lock.png', 'class': 'lock-img', 'width': '50px'});
+            let imgLock = document.createElement('button');
+            setAttributes(imgLock, {'class': 'lock-img'});
             if (i !== 0){
                 divId[i].append(imgLock);
             }
@@ -388,9 +373,6 @@ for (let i = 0; i < divId.length; i++) {
     });
 
     parent.append(divId[i]);
-    imgSprite[i].onload = function() {
-        imgSprite[i].width /= 1.5;
-    }
 }
 
 //order admin

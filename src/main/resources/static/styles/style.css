@@ -295,6 +295,11 @@ a{
     border: none;
 }
 
+.btn-reload {
+    width: 20px;
+    height: 50px;
+}
+
 /*header for admin all pages*/
 .header-page{
     text-align: center;
@@ -463,6 +468,119 @@ a{
     height: 742px;
     align-content: center;
     position: relative;
+}
+
+.lock-img{
+    background: url("../img/lock.png") center center no-repeat;
+    background-size: 50px;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+#object0{
+    background: url("../img/sprite0.png");
+    background-size: 440px 173px;
+    width: 440px;
+    height: 173px;
+}
+
+#object1{
+    background: url("../img/sprite1.png");
+    background-size: 178px 61px;
+    width: 178px;
+    height: 61px;
+}
+
+#object2{
+    background: url("../img/sprite2.png");
+    background-size: 157px 161px;
+    width: 157px;
+    height: 161px;
+}
+
+#object3{
+    background: url("../img/sprite3.png");
+    background-size: 162px 148px;
+    width: 162px;
+    height: 148px;
+}
+
+#object4{
+    background: url("../img/sprite4.png");
+    background-size: 253px 165px;
+    width: 253px;
+    height: 165px;
+}
+
+#object5{
+    background: url("../img/sprite5.png");
+    background-size: 195px 166px;
+    width: 195px;
+    height: 166px;
+}
+
+#object6{
+    background: url("../img/sprite6.png");
+    background-size: 135px 100px;
+    width: 135px;
+    height: 100px;
+}
+
+#object7{
+    background: url("../img/sprite7.png");
+    background-size: 92px 139px;
+    width: 92px;
+    height: 139px;
+}
+
+#object8{
+    background: url("../img/sprite8.png");
+    background-size: 129px 156px;
+    width: 129px;
+    height: 156px;
+}
+
+#object9{
+     background: url("../img/sprite9.png");
+     background-size: 159px 100px;
+     width: 159px;
+     height: 100px;
+ }
+
+#object10{
+    background: url("../img/sprite7.png");
+    background-size: 92px 139px;
+    width: 92px;
+    height: 139px;
+}
+
+#object11{
+    background: url("../img/sprite8.png");
+    background-size: 129px 156px;
+    width: 129px;
+    height: 156px;
+}
+
+#object12{
+    background: url("../img/sprite8.png");
+    background-size: 129px 156px;
+    width: 129px;
+    height: 156px;
+}
+
+#object13{
+    background: url("../img/sprite9.png");
+    background-size: 159px 100px;
+    width: 159px;
+    height: 100px;
+}
+
+#object14{
+    background: url("../img/sprite9.png");
+    background-size: 159px 100px;
+    width: 159px;
+    height: 100px;
 }
 
 #parent{
