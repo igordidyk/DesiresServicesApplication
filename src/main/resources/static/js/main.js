@@ -41,7 +41,6 @@ addEmployee.addEventListener('click', function () {
     });
 });
 
-
 let btnDeleteEl = document.querySelectorAll('#deleteEmployee');
 let commonDivDelete = document.querySelectorAll('.common-div');
 for (let i = 0; i < btnDeleteEl.length; i++) {

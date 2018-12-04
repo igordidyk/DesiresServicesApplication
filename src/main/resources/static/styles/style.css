@@ -388,8 +388,8 @@ a{
 
 /*date*/
 .ui-datepicker-calendar tr:hover {
-    background-color: rgb(202, 165, 112);
-}
+     background-color: rgb(202, 165, 112);
+ }
 
 .ui-datepicker {
     width: 18em;
@@ -414,6 +414,10 @@ a{
 .form-control::placeholder {
     color: rgb(236, 231, 176);
     text-align: center;
+}
+
+.length-datetime-local {
+    width: 175px;
 }
 
 .text-workers, .select-workers{

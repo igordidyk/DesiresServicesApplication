@@ -60,7 +60,7 @@ for (let i = 0; i < menuAdministrator.length; i++) {
 
     btnMenu.append(imgAddMenu);
 
-    let gridMenuAdministrator = document.createElement('form');
+    let gridMenuAdministrator = document.createElement('div');
     gridMenuAdministrator.setAttribute('class', 'grid-menu-administrator');
 
     appendChildren(gridMenuAdministrator, {inputDishMenu, inputDishConsistMenu, inputWeightMenu,
