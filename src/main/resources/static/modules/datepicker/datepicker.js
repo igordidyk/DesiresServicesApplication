@@ -11,12 +11,12 @@ $('.date-picker').datepicker( {
         endDate = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay() + 6);
         let dateFormat = inst.settings.dateFormat || $.datepicker._defaults.dateFormat;
         $('#startDate').text($.datepicker.formatDate( dateFormat, startDate, inst.settings ));
-                    $('#endDate').text($.datepicker.formatDate( dateFormat, endDate, inst.settings ));
-                    $(this).val($.datepicker.formatDate( dateFormat, startDate, inst.settings ) + " - " + $.datepicker.formatDate( dateFormat, endDate, inst.settings ));
-                    $(function() {
-                        $.datepicker.setDefaults($.datepicker.regional['uk']);
-                        $("#StartDate").datepicker();
-                        $('#StartDate').datepicker('option', 'dateFormat', 'yy-mm-dd');
-                    });
+        $('#endDate').text($.datepicker.formatDate( dateFormat, endDate, inst.settings ));
+        $(this).val($.datepicker.formatDate( dateFormat, startDate, inst.settings ) + " - " + $.datepicker.formatDate( dateFormat, endDate, inst.settings ));
+        $(function() {
+            $.datepicker.setDefaults($.datepicker.regional['uk']);
+            $("#StartDate").datepicker();
+            $('#StartDate').datepicker('option', 'dateFormat', 'yy-mm-dd');
+        });
     }
 });

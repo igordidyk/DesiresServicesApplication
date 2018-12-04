@@ -9,7 +9,7 @@ let chart = Highcharts.chart('container', {
     },
 
     xAxis: {
-        categories: ['Салат', 'Рис', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'water', 'a', 'b', 'c']
+        categories: ['Салат', 'Рис']
     },
 
     series: [{
