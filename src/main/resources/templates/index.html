@@ -44,6 +44,37 @@
         </div>
     </div>
 
+    <div class="anonymous" id="reservation">
+        <div class="center">
+            <div class="grid-all">
+                <header class="header-for-all">
+                    <div class="grid-header">
+                        <div><img th:src="@{/img/logo.png}" alt="logo"></div>
+                        <div class="header-log">
+                            <div><a th:href="@{/#}" class="log-in-and-open-from">Вхід</a></div>
+                            <div><a th:href="@{/#}" class="sign-up-and-open-form">Зареєструватися</a></div>
+                        </div>
+                    </div>
+                </header>
+                <div class="content">
+                    <nav class="navigation-anonymous">
+                        <a th:href="@{/#main}"><div class="item-menu item-bg">Головна</div></a>
+                        <a th:href="@{/#reservation}"><div class="item-menu">Резервація</div></a>
+                        <a th:href="@{/#menu-dishes}"><div class="item-menu">Меню</div></a>
+                        <a th:href="@{/#contacts}"><div class="item-menu">Контакти</div></a>
+                    </nav>
+                    <h1 class="header-page">Резервація столика</h1>
+                    <p>Дата та час: <input type="datetime-local" id="client-date-time" class="form-control form-control-sm length-datetime-local" value="Date-Time"/></p>
+                    <div class="main-content-reservation">
+                        <div id="parent"></div>
+                    </div>
+                    <form class="grid-for-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="anonymous" id="contacts">
         <div class="center">
             <div class="grid-all">
