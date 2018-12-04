@@ -139,7 +139,6 @@ btnOnClickNew.addEventListener('click', function () {
     scheduleList.before(commonDivForSchedule);
 });
 
-
 // let getWorkersFromWorkersList = document.querySelector('#get-employee-from-list');
 // getWorkersFromWorkersList.addEventListener('click', function () {
 
@@ -155,7 +154,6 @@ btnOnClickNew.addEventListener('click', function () {
 //         }
 //     });
 // });
-
 
 // function getListWorker() {
 //     $.ajax({
