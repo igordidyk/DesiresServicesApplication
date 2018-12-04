@@ -46,31 +46,30 @@ let commonDivDelete = document.querySelectorAll('.common-div');
 for (let i = 0; i < btnDeleteEl.length; i++) {
     for (let j = 0; j < commonDivDelete.length; j++) {
         btnDeleteEl[i].addEventListener('click', function (e) {
-            $.ajax({
-                url: '/admin/removeEmployee',
-                type: 'post',
-                contentType: 'application/json',
-                success: function () {
-
-                    if (e.target) {
-                        if (i === j) {
-                            commonDivDelete[j].remove();
+            // console.log('/admin/removeEmployee/'+btnDeleteEl[i].getAttribute('value'));
+            if(e.target){
+                if(i===j){
+                    $.ajax({
+                        url: '/admin/removeEmployee/'+btnDeleteEl[i].getAttribute('value'),
+                        type: 'delete',
+                        contentType: 'application/json',
+                        success: function () {
+                        },
+                        error: function () {
+                            console.log("Failed to delete");
                         }
-                    }
-                },
-
-                error: function () {
-                    console.log("Failed to delete");
+                    });
                 }
-            });
+            }
         });
     }
 }
 
 let scheduleList = document.querySelector('.list-text-workers');
-let variable = [];
+let variableCheckLimit = 0;
 let btnOnClickNew = document.querySelector('.btn-add-new');
 btnOnClickNew.addEventListener('click', function () {
+    variableCheckLimit++;
     let surnameName = document.createElement('select');
     surnameName.setAttribute('class', 'select-workers');
     let btnDeleteElSchedule = document.createElement('button');
@@ -78,6 +77,7 @@ btnOnClickNew.addEventListener('click', function () {
 
     btnDeleteElSchedule.addEventListener('click', function () {
         commonDivForSchedule.remove();
+        variableCheckLimit--;
     });
 
     let imgDeleteElSchedule = document.createElement('img');
@@ -116,6 +116,29 @@ btnOnClickNew.addEventListener('click', function () {
         listenerDayOfWeek(arrayOfDays[i]);
     }
 
+    $.ajax({
+        url:'/admin/getEmployeesList',
+        type:'get',
+        success:function (data) {
+            for (let i = 0; i < arrayOfDays.length; i++) {
+                for (let j = 0; j < data.length; j++){
+                    arrayOfDays[i].setAttribute('id', data[j].id + String(i) + new Date().getDate() +
+                        (Number(new Date().getMonth())+1) +  new Date().getFullYear());
+                    console.log (data[j].id + String(i));
+                }
+            }
+        },
+        error:function () {
+            console.log("Failed to show");
+        }
+    });
+
+    // for (let i = 0; i < arrayOfDays.length; i++) {
+    //     arrayOfDays[i] = document.createElement('div');
+    //     arrayOfDays[i].setAttribute('class', 'text-workers text-workers-check');
+    //     listenerDayOfWeek(arrayOfDays[i]);
+    // }
+
     let counter = 0;
 
     function listenerDayOfWeek(day) {
@@ -136,8 +159,34 @@ btnOnClickNew.addEventListener('click', function () {
     for (let i = 0; i < arrayOfDays.length; i++) {
         commonDivForSchedule.appendChild(arrayOfDays[i]);
     }
-    scheduleList.before(commonDivForSchedule);
+    let message = document.createElement('div');
+    message.setAttribute('class', 'schedule-message');
+    let massageNone = document.querySelector('.schedule-message');
+    $.ajax({
+        url:'/admin/getEmployeesList',
+        type:'get',
+        success:function (data) {
+            if (variableCheckLimit <= data.length){
+                if (massageNone){
+                    massageNone.style.display = 'none';
+                }
+                scheduleList.before(commonDivForSchedule);
+            }else{
+                message.appendChild(document.createTextNode('Кількість блоків перевищує за кількість працівників у списку'));
+                scheduleList.before(message);
+                variableCheckLimit--;
+            }
+        },
+        error:function () {
+            console.log("Failed to show");
+        }
+    });
+    // scheduleList.before(commonDivForSchedule);
 });
+
+
+
+
 
 // let getWorkersFromWorkersList = document.querySelector('#get-employee-from-list');
 // getWorkersFromWorkersList.addEventListener('click', function () {
@@ -154,6 +203,7 @@ btnOnClickNew.addEventListener('click', function () {
 //         }
 //     });
 // });
+
 
 // function getListWorker() {
 //     $.ajax({

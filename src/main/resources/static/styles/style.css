@@ -360,6 +360,12 @@ a{
 }
 
 /*workers schedule*/
+.schedule-message{
+    text-align: center;
+    color: rgb(255, 17, 0);
+
+}
+
 .bg-for-nav{
     background: rgb(150, 99, 68);
 }
@@ -388,8 +394,8 @@ a{
 
 /*date*/
 .ui-datepicker-calendar tr:hover {
-     background-color: rgb(202, 165, 112);
- }
+    background-color: rgb(202, 165, 112);
+}
 
 .ui-datepicker {
     width: 18em;
@@ -546,11 +552,11 @@ a{
 }
 
 #object9{
-     background: url("../img/sprite9.png");
-     background-size: 159px 100px;
-     width: 159px;
-     height: 100px;
- }
+    background: url("../img/sprite9.png");
+    background-size: 159px 100px;
+    width: 159px;
+    height: 100px;
+}
 
 #object10{
     background: url("../img/sprite7.png");
@@ -749,7 +755,7 @@ a{
     font-size: 25px;
 }
 
- .style-form-odd{
+.style-form-odd{
     grid-template-columns: 20% 50% 20%;
 }
 
@@ -816,4 +822,3 @@ a{
     border: 0.5px solid black;
     background: linear-gradient(to bottom, #9c6044, #efb69c);
 }
-
