@@ -351,7 +351,7 @@ for (let i = 0; i < divId.length; i++) {
     });
 
     let counterLock = 0;
-    divId[i].addEventListener('click', function (e) {
+    divId[i].addEventListener('dblclick', function (e) {
         if (counterLock === 0) {
             let imgLock = document.createElement('button');
             setAttributes(imgLock, {'class': 'lock-img'});
