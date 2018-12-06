@@ -133,3 +133,12 @@ for (let i = 0; i < divId.length; i++) {
 
     parent.append(divId[i]);
 }
+
+//padding for navigation bar
+let padForMenu = document.querySelectorAll('.item-nav-admin-even');
+for (let i = 0; i < padForMenu.length; i++) {
+    for (let j = 0; j < 9; j++) {
+        padForMenu[i].style.marginLeft = String(j + 2) + 'px';
+        padForMenu[i].style.width = String(j * 2 + 60) + 'px';
+    }
+}

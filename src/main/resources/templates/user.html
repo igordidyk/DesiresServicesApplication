@@ -72,6 +72,406 @@
     </div>
 </div>
 
+<div class="anonymous" id="menu-user">
+    <div class="center">
+        <div class="grid-all">
+            <header class="header-for-all">
+                <div class="grid-header">
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
+                    <div class="header-log">
+                        <div><a th:href="@{/}">Вихід</a></div>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <nav class="navigation-anonymous">
+                    <a th:href="@{#user}"><div class="item-menu">Головна</div></a>
+                    <a th:href="@{#reservation-user}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-user}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#contacts-user}"><div class="item-menu">Контакти</div></a>
+                </nav>
+                <h1 class="header-page">Меню</h1>
+                <div class="main-content-menu-dishes">
+                    <div class="grid-all-content-administrator">
+                        <div class="menu-center-odd">
+                            <h2 class="menu-header-administrator menu-header-administrator-odd">
+                                <div class="menu-header-administrator-form style-form-odd">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" name="typeOfDish" id="pizza" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" type="submit" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-odd">
+                                <div class="grid-for-item-menu">
+                                    <div class="grid-menu-administrator">
+                                        <div class="name-of-dish">Назва</div>
+                                        <div class="name-of-dish">Склад</div>
+                                        <div class="name-of-dish">Вага, г</div>
+                                        <div class="name-of-dish">Ціна, грн</div>
+                                        <div></div>
+                                    </div>
+                                    <div class="list-of-dish"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-center-even">
+                            <h2 class="menu-header-administrator menu-header-administrator-even">
+                                <div class="menu-header-administrator-form style-form-even">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="salad" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-even">
+                                <div>
+                                    <div class="grid-for-item-menu">
+                                        <div class="grid-menu-administrator">
+                                            <div class="name-of-dish">Назва</div>
+                                            <div class="name-of-dish">Склад</div>
+                                            <div class="name-of-dish">Вага, г</div>
+                                            <div class="name-of-dish">Ціна, грн</div>
+                                            <div></div>
+                                        </div>
+                                        <div class="list-of-dish"></div>
+                                    </div>
+                                </div>
+                                <nav class="navigation-administrator-menu">
+                                    <a th:href="@{#menu-user}"><div class="pizza item-margin item-bg"></div></a>
+                                    <a th:href="@{#cold-dish}"><div class="dish-hot-cold item-nav-admin-even"></div></a>
+                                    <a th:href="@{#soup}"><div class="soup-hot item-nav-admin-even"></div></a>
+                                    <a th:href="@{#pancakes}"><div class="pancakes-desserts item-nav-admin-even"></div></a>
+                                    <a th:href="@{#non-alcoholic}"><div class="alco-and-non item-nav-admin-even"></div></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="anonymous" id="cold-dish">
+    <div class="center">
+        <div class="grid-all">
+            <header class="header-for-all">
+                <div class="grid-header">
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
+                    <div class="header-log">
+                        <div><a href="index.html">Вихід</a></div>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <nav class="navigation-anonymous">
+                    <a th:href="@{#user}"><div class="item-menu">Головна</div></a>
+                    <a th:href="@{#reservation-user}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-user}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#contacts-user}"><div class="item-menu">Контакти</div></a>
+                </nav>
+                <h1 class="header-page">Меню</h1>
+                <div class="main-content-menu-dishes">
+                    <div class="grid-all-content-administrator">
+                        <div class="menu-center-odd">
+                            <h2 class="menu-header-administrator menu-header-administrator-odd">
+                                <div class="menu-header-administrator-form style-form-odd">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="cold" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-odd">
+                                <div class="grid-for-item-menu">
+                                    <div class="grid-menu-administrator">
+                                        <div class="name-of-dish">Назва</div>
+                                        <div class="name-of-dish">Склад</div>
+                                        <div class="name-of-dish">Вага, г</div>
+                                        <div class="name-of-dish">Ціна, грн</div>
+                                        <div></div>
+                                    </div>
+                                    <div class="list-of-dish"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-center-even">
+                            <h2 class="menu-header-administrator menu-header-administrator-even">
+                                <div class="menu-header-administrator-form style-form-even">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="hot" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-even">
+                                <div>
+                                    <div class="grid-for-item-menu">
+                                        <div class="grid-menu-administrator">
+                                            <div class="name-of-dish">Назва</div>
+                                            <div class="name-of-dish">Склад</div>
+                                            <div class="name-of-dish">Вага, г</div>
+                                            <div class="name-of-dish">Ціна, грн</div>
+                                            <div></div>
+                                        </div>
+                                        <div class="list-of-dish"></div>
+                                    </div>
+                                </div>
+                                <nav class="navigation-administrator-menu">
+                                    <a th:href="@{#menu-user}"><div class="pizza item-nav-admin-even"></div></a>
+                                    <a th:href="@{#cold-dish}"><div class="dish-hot-cold item-margin item-bg"></div></a>
+                                    <a th:href="@{#soup}"><div class="soup-hot item-nav-admin-even"></div></a>
+                                    <a th:href="@{#pancakes}"><div class="pancakes-desserts item-nav-admin-even"></div></a>
+                                    <a th:href="@{#non-alcoholic}"><div class="alco-and-non item-nav-admin-even"></div></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="anonymous" id="soup">
+    <div class="center">
+        <div class="grid-all">
+            <header class="header-for-all">
+                <div class="grid-header">
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
+                    <div class="header-log">
+                        <div><a href="index.html">Вихід</a></div>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <nav class="navigation-anonymous">
+                    <a th:href="@{#user}"><div class="item-menu">Головна</div></a>
+                    <a th:href="@{#reservation-user}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-user}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#contacts-user}"><div class="item-menu">Контакти</div></a>
+                </nav>
+                <h1 class="header-page">Меню</h1>
+                <div class="main-content-menu-dishes">
+                    <div class="grid-all-content-administrator">
+                        <div class="menu-center-odd">
+                            <h2 class="menu-header-administrator menu-header-administrator-odd">
+                                <div class="menu-header-administrator-form style-form-odd">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="soup-hot-other" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-odd">
+                                <div class="grid-for-item-menu">
+                                    <div class="grid-menu-administrator">
+                                        <div class="name-of-dish">Назва</div>
+                                        <div class="name-of-dish">Склад</div>
+                                        <div class="name-of-dish">Вага, г</div>
+                                        <div class="name-of-dish">Ціна, грн</div>
+                                        <div></div>
+                                    </div>
+                                    <div class="list-of-dish"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-center-even">
+                            <h2 class="menu-header-administrator menu-header-administrator-even">
+                                <div class="menu-header-administrator-form style-form-even">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="hot-other" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-even">
+                                <div>
+                                    <div class="grid-for-item-menu">
+                                        <div class="grid-menu-administrator">
+                                            <div class="name-of-dish">Назва</div>
+                                            <div class="name-of-dish">Склад</div>
+                                            <div class="name-of-dish">Вага, г</div>
+                                            <div class="name-of-dish">Ціна, грн</div>
+                                            <div></div>
+                                        </div>
+                                        <div class="list-of-dish"></div>
+                                    </div>
+                                </div>
+                                <nav class="navigation-administrator-menu">
+                                    <a th:href="@{#menu-user}"><div class="pizza item-nav-admin-even"></div></a>
+                                    <a th:href="@{#cold-dish}"><div class="dish-hot-cold item-nav-admin-even"></div></a>
+                                    <a th:href="@{#soup}"><div class="soup-hot item-margin item-bg"></div></a>
+                                    <a th:href="@{#pancakes}"><div class="pancakes-desserts item-nav-admin-even"></div></a>
+                                    <a th:href="@{#non-alcoholic}"><div class="alco-and-non item-nav-admin-even"></div></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="anonymous" id="pancakes">
+    <div class="center">
+        <div class="grid-all">
+            <header class="header-for-all">
+                <div class="grid-header">
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
+                    <div class="header-log">
+                        <div><a href="index.html">Вихід</a></div>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <nav class="navigation-anonymous">
+                    <a th:href="@{#user}"><div class="item-menu">Головна</div></a>
+                    <a th:href="@{#reservation-user}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-user}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#contacts-user}"><div class="item-menu">Контакти</div></a>
+                </nav>
+                <h1 class="header-page">Меню</h1>
+                <div class="main-content-menu-dishes">
+                    <div class="grid-all-content-administrator">
+                        <div class="menu-center-odd">
+                            <h2 class="menu-header-administrator menu-header-administrator-odd">
+                                <div class="menu-header-administrator-form style-form-odd">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="pancakes-desert" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-odd">
+                                <div class="grid-for-item-menu">
+                                    <div class="grid-menu-administrator">
+                                        <div class="name-of-dish">Назва</div>
+                                        <div class="name-of-dish">Склад</div>
+                                        <div class="name-of-dish">Вага, г</div>
+                                        <div class="name-of-dish">Ціна, грн</div>
+                                        <div></div>
+                                    </div>
+                                    <div class="list-of-dish"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-center-even">
+                            <h2 class="menu-header-administrator menu-header-administrator-even">
+                                <div class="menu-header-administrator-form style-form-even">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="desert" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-even">
+                                <div>
+                                    <div class="grid-for-item-menu">
+                                        <div class="grid-menu-administrator">
+                                            <div class="name-of-dish">Назва</div>
+                                            <div class="name-of-dish">Склад</div>
+                                            <div class="name-of-dish">Вага, г</div>
+                                            <div class="name-of-dish">Ціна, грн</div>
+                                            <div></div>
+                                        </div>
+                                        <div class="list-of-dish"></div>
+                                    </div>
+                                </div>
+                                <nav class="navigation-administrator-menu">
+                                    <a th:href="@{#menu-user}"><div class="pizza item-nav-admin-even"></div></a>
+                                    <a th:href="@{#cold-dish}"><div class="dish-hot-cold item-nav-admin-even"></div></a>
+                                    <a th:href="@{#soup}"><div class="soup-hot item-nav-admin-even"></div></a>
+                                    <a th:href="@{#pancakes}"><div class="pancakes-desserts item-margin item-bg"></div></a>
+                                    <a th:href="@{#non-alcoholic}"><div class="alco-and-non item-nav-admin-even"></div></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="anonymous" id="non-alcoholic">
+    <div class="center">
+        <div class="grid-all">
+            <header class="header-for-all">
+                <div class="grid-header">
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
+                    <div class="header-log">
+                        <div><a href="index.html">Вихід</a></div>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <nav class="navigation-anonymous">
+                    <a th:href="@{#user}"><div class="item-menu">Головна</div></a>
+                    <a th:href="@{#reservation-user}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-user}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#contacts-user}"><div class="item-menu">Контакти</div></a>
+                </nav>
+                <h1 class="header-page">Меню</h1>
+                <div class="main-content-menu-dishes">
+                    <div class="grid-all-content-administrator">
+                        <div class="menu-center-odd">
+                            <h2 class="menu-header-administrator menu-header-administrator-odd">
+                                <div class="menu-header-administrator-form style-form-odd">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="non-alco" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-odd">
+                                <div class="grid-for-item-menu">
+                                    <div class="grid-menu-administrator">
+                                        <div class="name-of-dish">Назва</div>
+                                        <div class="name-of-dish">Склад</div>
+                                        <div class="name-of-dish">Вага, г</div>
+                                        <div class="name-of-dish">Ціна, грн</div>
+                                        <div></div>
+                                    </div>
+                                    <div class="list-of-dish"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-center-even">
+                            <h2 class="menu-header-administrator menu-header-administrator-even">
+                                <div class="menu-header-administrator-form style-form-even">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="alco" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
+                            </h2>
+                            <div class="grid-menu-and-dishes-even">
+                                <div>
+                                    <div class="grid-for-item-menu">
+                                        <div class="grid-menu-administrator">
+                                            <div class="name-of-dish">Назва</div>
+                                            <div class="name-of-dish">Склад</div>
+                                            <div class="name-of-dish">Вага, г</div>
+                                            <div class="name-of-dish">Ціна, грн</div>
+                                            <div></div>
+                                        </div>
+                                        <div class="list-of-dish"></div>
+                                    </div>
+                                </div>
+                                <nav class="navigation-administrator-menu">
+                                    <a th:href="@{#menu-user}"><div class="pizza item-nav-admin-even"></div></a>
+                                    <a th:href="@{#cold-dish}"><div class="dish-hot-cold item-nav-admin-even"></div></a>
+                                    <a th:href="@{#soup}"><div class="soup-hot item-nav-admin-even"></div></a>
+                                    <a th:href="@{#pancakes}"><div class="pancakes-desserts item-nav-admin-even"></div></a>
+                                    <a th:href="@{#non-alcoholic}"><div class="alco-and-non item-margin item-bg"></div></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="anonymous" id="contacts-user">
     <div class="center">
         <div class="grid-all">
