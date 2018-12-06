@@ -20,10 +20,10 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu item-bg">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
                     <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
@@ -79,10 +79,10 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu item-bg">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
                     <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
@@ -96,8 +96,8 @@
                         <h1 class="header-page header-workers">Список</h1>
                         <div class="grid-add-center">
                             <div class="grid-add-new-workers">
-                                <input id="fullName" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers"/>
-                                <input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number"/>
+                                <!--<input id="fullName" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers"/>-->
+                                <!--<input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number"/>-->
                                 <!--<button class="btn-add" type="submit" disabled id="addEmployee"><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>-->
                                 <div class="list-of-workers" id="employeeList">
                                     <th:block th:each="emp:${employees}">
@@ -129,11 +129,11 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu item-bg">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                    <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-staff}"><div class="item-menu">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
 
@@ -168,7 +168,7 @@
     </div>
 </div>
 
-<div class="anonymous" id="reservation-administrator">
+<div class="anonymous" id="reservation-staff">
     <div class="center">
         <div class="grid-all">
             <header class="header-for-all">
@@ -180,11 +180,11 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu item-bg">Резервація</div></a>
-                    <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu item-bg">Резервація</div></a>
+                    <a th:href="@{#menu-staff}"><div class="item-menu">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
                 <h1 class="header-page">Резервація столика</h1>
@@ -192,16 +192,12 @@
                 <div class="main-content-reservation">
                     <div id="parent"></div>
                 </div>
-                <div class="grid-for-btn">
-                    <button class="drag-and-drop">Редагувати</button>
-                    <button class="none-drag-and-drop">Зберегти</button>
-                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="anonymous" id="menu-administrator">
+<div class="anonymous" id="menu-staff">
     <div class="center">
         <div class="grid-all">
             <header class="header-for-all">
@@ -213,11 +209,11 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                    <a th:href="@{#menu-administrator}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-staff}"><div class="item-menu item-bg">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
                 <h1 class="header-page">Меню</h1>
@@ -294,11 +290,11 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                    <a th:href="@{#menu-administrator}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-staff}"><div class="item-menu item-bg">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
                 <h1 class="header-page">Меню</h1>
@@ -375,11 +371,11 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                    <a th:href="@{#menu-administrator}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-staff}"><div class="item-menu item-bg">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
                 <h1 class="header-page">Меню</h1>
@@ -456,11 +452,11 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                    <a th:href="@{#menu-administrator}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-staff}"><div class="item-menu item-bg">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
                 <h1 class="header-page">Меню</h1>
@@ -537,11 +533,11 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                    <a th:href="@{#menu-administrator}"><div class="item-menu item-bg">Меню</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-staff}"><div class="item-menu item-bg">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu">Статистика</div></a>
                 </nav>
                 <h1 class="header-page">Меню</h1>
@@ -618,11 +614,11 @@
                 </div>
             </header>
             <div class="content">
-                <nav class="navigation-administrator">
+                <nav class="navigation-staff">
                     <a th:href="@{#staff}"><div class="item-menu">Замовлення</div></a>
                     <a th:href="@{#workers-list}"><div class="item-menu">Працівники</div></a>
-                    <a th:href="@{#reservation-administrator}"><div class="item-menu">Резервація</div></a>
-                    <a th:href="@{#menu-administrator}"><div class="item-menu">Меню</div></a>
+                    <a th:href="@{#reservation-staff}"><div class="item-menu">Резервація</div></a>
+                    <a th:href="@{#menu-staff}"><div class="item-menu">Меню</div></a>
                     <a th:href="@{#statistics}"><div class="item-menu item-bg">Статистика</div></a>
                 </nav>
                 <h1 class="header-page">Статистика</h1>
