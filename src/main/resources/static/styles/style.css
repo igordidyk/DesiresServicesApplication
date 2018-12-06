@@ -626,7 +626,7 @@ a{
     grid-column-gap: 60px;
 }
 
-.drag-and-drop, .none-drag-and-drop{
+.drag-and-drop, .none-drag-and-drop, .user-reserve-table {
     width: 150px;
     height: 50px;
     border-radius: 10px;
