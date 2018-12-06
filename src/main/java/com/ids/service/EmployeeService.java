@@ -33,7 +33,7 @@ public class EmployeeService {
         return employeeRepository.findById(id);
     }
 
-    @Modifying(clearAutomatically = true)
+    @Transactional
     public void removeEmployee(Employee emp){
         employeeRepository.delete(emp);
     }

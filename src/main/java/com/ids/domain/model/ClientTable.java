@@ -3,6 +3,7 @@ package com.ids.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.Instant;
 
 
 @Getter
@@ -19,7 +20,7 @@ public class ClientTable extends AuditModel {
     private Long id;
 
     @Column(name = "number_of_table",unique = true)
-    private Integer tableNumber;
+    private String tableNumber;
 
     private boolean isReserved;
 
@@ -27,12 +28,17 @@ public class ClientTable extends AuditModel {
 
     private boolean isEmpty;
 
+    @Column(name = "date_of_reservation",nullable = false)
+    private Instant dateOfReserved;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "client_id", nullable = false)
+    @Builder.Default
     private Client client;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "employee_id", nullable = false)
+    @Builder.Default
     private Employee employee;
 
 }

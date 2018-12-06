@@ -104,7 +104,7 @@
                                             <div class="common-div" th:object="${emp}">
                                                 <p class="text-workers list-workers-for-remove" th:text="*{fullName}"></p>
                                                 <p class="text-workers list-workers-for-remove" th:text="*{phoneNumber}"></p>
-                                                <button class="delete-btn" id="deleteEmployee"></button>
+                                                <button class="delete-btn" th:value="*{id}" id="deleteEmployee"></button>
                                             </div>
                                         </th:block>
                                     </div>

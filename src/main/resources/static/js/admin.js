@@ -346,12 +346,37 @@ for (let i = 0; i < divId.length; i++) {
     });
 
     let counterLock = 0;
+    let dateOfReserved = document.querySelector('#client-date-time');
+
     divId[i].addEventListener('dblclick', function (e) {
         if (counterLock === 0) {
             let imgLock = document.createElement('button');
             setAttributes(imgLock, {'class': 'lock-img'});
+            let table = {
+                tableNumber:idObj[i],
+                isReserved:false,
+                isOccupied:true,
+                isEmpty:false
+                // dateOfReserved:dateOfReserved
+            }
+
+
             if (i !== 0){
-                divId[i].append(imgLock);
+                console.log(dateOfReserved.value);
+                console.log(typeof dateOfReserved.value);
+
+                 $.ajax({
+                     url:'/admin/reserved/'+dateOfReserved.value,
+                     type:'post',
+                     data: JSON.stringify(table),
+                     contentType: 'application/json',
+                     success:function() {
+                        divId[i].append(imgLock);
+                     },
+                     error:function () {
+                         console.log("Failed to reserved a table");
+                     }
+                 });
             }
             counterLock++;
         }else{
