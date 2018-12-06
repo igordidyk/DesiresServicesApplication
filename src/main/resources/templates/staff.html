@@ -98,13 +98,13 @@
                             <div class="grid-add-new-workers">
                                 <input id="fullName" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers"/>
                                 <input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number"/>
-                                <button class="btn-add" type="submit" disabled id="addEmployee"><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>
+                                <!--<button class="btn-add" type="submit" disabled id="addEmployee"><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>-->
                                 <div class="list-of-workers" id="employeeList">
                                     <th:block th:each="emp:${employees}">
                                         <div class="common-div" th:object="${emp}">
                                             <p class="text-workers list-workers-for-remove" th:text="*{fullName}"></p>
                                             <p class="text-workers list-workers-for-remove" th:text="*{phoneNumber}"></p>
-                                            <button class="delete-btn" id="deleteEmployee"></button>
+                                            <!--<button class="delete-btn" id="deleteEmployee"></button>-->
                                         </div>
                                     </th:block>
                                 </div>
@@ -226,9 +226,9 @@
                         <div class="menu-center-odd">
                             <h2 class="menu-header-administrator menu-header-administrator-odd">
                                 <div class="menu-header-administrator-form style-form-odd">
-                                    <div></div>
-                                    <input type="text" name="typeOfDish" id="pizza" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" type="submit" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>
+                                    <!--<div></div>-->
+                                    <!--<input type="text" name="typeOfDish" id="pizza" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" type="submit" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
                                 </div>
                             </h2>
                             <div class="grid-menu-and-dishes-odd">
@@ -248,9 +248,9 @@
                         <div class="menu-center-even">
                             <h2 class="menu-header-administrator menu-header-administrator-even">
                                 <div class="menu-header-administrator-form style-form-even">
-                                    <div></div>
-                                    <input type="text" id="salad" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="salad" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
                                 </div>
                             </h2>
                             <div class="grid-menu-and-dishes-even">
@@ -287,7 +287,7 @@
         <div class="grid-all">
             <header class="header-for-all">
                 <div class="grid-header">
-                    <div><img src="../static/img/logo.png" alt="logo"></div>
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
                     <div class="header-log">
                         <div><a href="index.html">Вихід</a></div>
                     </div>
@@ -307,9 +307,9 @@
                         <div class="menu-center-odd">
                             <h2 class="menu-header-administrator menu-header-administrator-odd">
                                 <div class="menu-header-administrator-form style-form-odd">
-                                    <div></div>
-                                    <input type="text" id="cold" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="cold" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
                                 </div>
                             </h2>
                             <div class="grid-menu-and-dishes-odd">
@@ -329,9 +329,9 @@
                         <div class="menu-center-even">
                             <h2 class="menu-header-administrator menu-header-administrator-even">
                                 <div class="menu-header-administrator-form style-form-even">
-                                    <div></div>
-                                    <input type="text" id="hot" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="hot" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
                                 </div>
                             </h2>
                             <div class="grid-menu-and-dishes-even">
@@ -368,7 +368,7 @@
         <div class="grid-all">
             <header class="header-for-all">
                 <div class="grid-header">
-                    <div><img src="../static/img/logo.png" alt="logo"></div>
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
                     <div class="header-log">
                         <div><a href="index.html">Вихід</a></div>
                     </div>
@@ -388,9 +388,9 @@
                         <div class="menu-center-odd">
                             <h2 class="menu-header-administrator menu-header-administrator-odd">
                                 <div class="menu-header-administrator-form style-form-odd">
-                                    <div></div>
-                                    <input type="text" id="soup-hot-other" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="soup-hot-other" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
                                 </div>
                             </h2>
                             <div class="grid-menu-and-dishes-odd">
@@ -410,9 +410,9 @@
                         <div class="menu-center-even">
                             <h2 class="menu-header-administrator menu-header-administrator-even">
                                 <div class="menu-header-administrator-form style-form-even">
-                                    <div></div>
-                                    <input type="text" id="hot-other" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="hot-other" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
                                 </div>
                             </h2>
                             <div class="grid-menu-and-dishes-even">
@@ -449,7 +449,7 @@
         <div class="grid-all">
             <header class="header-for-all">
                 <div class="grid-header">
-                    <div><img src="../static/img/logo.png" alt="logo"></div>
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
                     <div class="header-log">
                         <div><a href="index.html">Вихід</a></div>
                     </div>
@@ -469,9 +469,9 @@
                         <div class="menu-center-odd">
                             <h2 class="menu-header-administrator menu-header-administrator-odd">
                                 <div class="menu-header-administrator-form style-form-odd">
-                                    <div></div>
-                                    <input type="text" id="pancakes-desert" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="pancakes-desert" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
                                 </div>
                             </h2>
                             <div class="grid-menu-and-dishes-odd">
@@ -491,9 +491,9 @@
                         <div class="menu-center-even">
                             <h2 class="menu-header-administrator menu-header-administrator-even">
                                 <div class="menu-header-administrator-form style-form-even">
-                                    <div></div>
-                                    <input type="text" id="desert" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="desert" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
                                 </div>
                             </h2>
                             <div class="grid-menu-and-dishes-even">
@@ -530,7 +530,7 @@
         <div class="grid-all">
             <header class="header-for-all">
                 <div class="grid-header">
-                    <div><img src="../static/img/logo.png" alt="logo"></div>
+                    <div><img th:src="@{/img/logo.png}" alt="logo"></div>
                     <div class="header-log">
                         <div><a href="index.html">Вихід</a></div>
                     </div>
@@ -549,11 +549,11 @@
                     <div class="grid-all-content-administrator">
                         <div class="menu-center-odd">
                             <h2 class="menu-header-administrator menu-header-administrator-odd">
-                                <form class="menu-header-administrator-form style-form-odd">
-                                    <div></div>
-                                    <input type="text" id="non-alco" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>
-                                </form>
+                                <div class="menu-header-administrator-form style-form-odd">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="non-alco" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
                             </h2>
                             <div class="grid-menu-and-dishes-odd">
                                 <div class="grid-for-item-menu">
@@ -571,11 +571,11 @@
 
                         <div class="menu-center-even">
                             <h2 class="menu-header-administrator menu-header-administrator-even">
-                                <form class="menu-header-administrator-form style-form-even">
-                                    <div></div>
-                                    <input type="text" id="alco" placeholder="Тип страви" class="input-title">
-                                    <button class="btn-title-dish" disabled><img src="../static/img/add.png" class="img-title-dish"></button>
-                                </form>
+                                <div class="menu-header-administrator-form style-form-even">
+                                    <!--<div></div>-->
+                                    <!--<input type="text" id="alco" placeholder="Тип страви" class="input-title">-->
+                                    <!--<button class="btn-title-dish" disabled><img th:src="@{/img/add.png}" class="img-title-dish"></button>-->
+                                </div>
                             </h2>
                             <div class="grid-menu-and-dishes-even">
                                 <div>
@@ -646,6 +646,6 @@
 <script th:src="@{/modules/highcharts/exporting.js}"></script>
 <script th:src="@{/js/staff.js}"></script>
 <script th:src="@{/js/charts.js}"></script>
-<script th:src="@{/js/main.js}"></script>
+<!--<script th:src="@{/js/main.js}"></script>-->
 </body>
 </html>
