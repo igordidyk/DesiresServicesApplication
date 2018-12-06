@@ -303,3 +303,49 @@ blockFormSignUp.addEventListener('click', e => {
     signUpFormInput4.style.display = 'grid';
     signUpFormFormSubmit.style.display = 'grid';
 });
+
+//reservation
+let divId = [];
+let idObj = [];
+for (let i = 0; i < 15; i++) {
+    divId[i] = 'object' + i;
+    idObj[i] = 'object' + i;
+}
+
+let parent = document.getElementById('parent');
+let arrLeft = ['20px', '578px', '428px', '445px', '52px', '562px', '620px', '470px', '625px', '26px', '459px',
+    '28px', '203px', '189px', '596px'];
+let arrTop = ['20px', '28px', '28px', '431px', '220px', '550px', '433px', '233px', '110px', '614px', '572px',
+    '425px', '427px', '614px', '291px'];
+
+for (let i = 0; i < divId.length; i++) {
+    divId[i] = document.createElement('div');
+    divId[i].setAttribute('class', 'div-sprite');
+    divId[i].style.left = arrLeft[i];
+    divId[i].style.top = arrTop[i];
+    divId[i].setAttribute('id', idObj[i]);
+
+    let counterLock = 0;
+    divId[i].addEventListener('click', function (e) {
+        if (counterLock === 0) {
+            let imgLock = document.createElement('button');
+            setAttributes(imgLock, {'class': 'lock-img'});
+            if (i !== 0){
+                divId[i].append(imgLock);
+            }
+            counterLock++;
+        }else{
+            let getSome = document.querySelectorAll('.lock-img');
+            for (let j = 0; j < getSome.length; j++) {
+                if(counterLock !== 0) {
+                    if (e.target === getSome[j]) {
+                        getSome[j].remove();
+                        counterLock = 0;
+                    }
+                }
+            }
+        }
+    });
+
+    parent.append(divId[i]);
+}
