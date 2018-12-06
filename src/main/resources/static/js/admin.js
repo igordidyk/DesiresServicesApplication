@@ -55,11 +55,6 @@ for (let i = 0; i < menuAdministrator.length; i++) {
     let btnMenu = document.createElement('button');
     setAttributes(btnMenu, {'class': 'add-btn-admin', 'disabled': 'disabled'});
 
-    let imgAddMenu = document.createElement('img');
-    setAttributes(imgAddMenu, {'class': 'add-img-admin', 'src': '../static/img/add.png'});
-
-    btnMenu.append(imgAddMenu);
-
     let gridMenuAdministrator = document.createElement('div');
     gridMenuAdministrator.setAttribute('class', 'grid-menu-administrator');
 
@@ -102,13 +97,13 @@ for (let i = 0; i < vanishedBtn.length; i++) {
     let btnEdit = document.createElement('button');
     btnEdit.setAttribute('class', 'btn-edit');
     let imgEdit = document.createElement('img');
-    imgEdit.setAttribute('class', 'img-edit');
-    imgEdit.setAttribute('src', '../static/img/edit.png');
+    // imgEdit.setAttribute('class', 'img-edit');
+    // imgEdit.setAttribute('src', '../static/img/edit.png');
     let commonDivEdit = document.createElement('div');
     commonDivEdit.setAttribute('class', 'common-div-edit');
     let pEl = document.createElement('p');
     pEl.setAttribute('class', 'p-el');
-    btnEdit.append(imgEdit);
+    // btnEdit.append(imgEdit);
     let formNone = document.querySelectorAll('.menu-header-administrator-form');
 
     /*Add Event Listener for add button on dish title in menu*/

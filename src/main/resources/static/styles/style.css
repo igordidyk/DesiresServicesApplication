@@ -813,6 +813,16 @@ a{
     width: 80%;
 }
 
+.add-btn-admin{
+    background: url("../img/add.png") center center no-repeat;
+    background-size: 30px;
+}
+
+.btn-edit{
+    background: url("../img/edit.png") center center no-repeat;
+    background-size: 30px;
+}
+
 /*statistics*/
 #plain, #inverted, #polar{
     margin-top: 10px;
