@@ -98,10 +98,14 @@
                                 <div class="grid-add-new-workers">
                                     <input id="fullName" name="fullName" type="text" placeholder="Прізвище Ім'я" class="add-new-workers"/>
                                     <input id="number" name="phone" type="tel" placeholder="Телефон" class="add-new-workers-number"/>
+                                    <input id="em" name="email" type="em" placeholder="Логін" class="add-new-workers-number"/>
+                                    <input id="pas" name="password" type="pass" placeholder="Пароль" class="add-new-workers-number"/>
                                     <button class="btn-add" type="submit" disabled id="addEmployee"><img th:src="@{/img/add.png}" alt="add" class="add-img"></button>
                                     <div class="list-of-workers" id="employeeList">
                                         <th:block th:each="emp:${employees}">
                                             <div class="common-div" th:object="${emp}">
+                                                <p class="text-workers list-workers-for-remove" th:text="*{fullName}"></p>
+                                                <p class="text-workers list-workers-for-remove" th:text="*{phoneNumber}"></p>
                                                 <p class="text-workers list-workers-for-remove" th:text="*{fullName}"></p>
                                                 <p class="text-workers list-workers-for-remove" th:text="*{phoneNumber}"></p>
                                                 <button class="delete-btn" th:value="*{id}" id="deleteEmployee"></button>

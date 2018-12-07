@@ -313,8 +313,8 @@ a{
 
 .grid-add-new-workers{
     display: grid;
-    grid-template-columns: 300px 200px 40px;
-    grid-column-gap: 60px;
+    grid-template-columns: 200px 160px 160px 160px 40px;
+    grid-column-gap: 40px;
     grid-row-gap: 20px;
 }
 
@@ -349,12 +349,12 @@ a{
 
 .common-div{
     display: grid;
-    grid-template-columns: 300px 200px 40px;
-    grid-column-gap: 60px;
+    grid-template-columns: 200px 160px 160px 160px 40px;
+    grid-column-gap: 40px;
 }
 
 .delete-btn{
-    grid-column: 3;
+    grid-column: 5;
     background: url('../img/delete.png') center center no-repeat;
     background-size: 30px;
 }
@@ -362,7 +362,8 @@ a{
 /*workers schedule*/
 .schedule-message{
     text-align: center;
-    color: rgb(255, 17, 0);
+    color: rgb(255, 255, 255);
+    margin: 0 150px 0 150px;
 
 }
 

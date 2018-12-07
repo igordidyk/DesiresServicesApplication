@@ -9,14 +9,15 @@ let chart = Highcharts.chart('container', {
     },
 
     xAxis: {
-        categories: ['Салат', 'Рис', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'water', 'a', 'b', 'c']
+        categories: ['Борщ', 'Пюре', 'Салат цезар','Вареники', 'Деруни', 'Чанахи','Пиво', 'Чіпси',
+            'Картопля по селянськи','Рагу', 'Борщок', 'Бограч']
     },
 
     series: [{
         type: 'column',
         name: 'Кількість',
         colorByPoint: true,
-        data: [50,10, 20, 30, 40, 5, 10, 15, 25, 35, 20, 27, 40, 12, 32, 13],
+        data: [50,10, 20, 30, 40, 5, 10, 15, 25, 35, 20, 27],
         showInLegend: false
     }]
 });

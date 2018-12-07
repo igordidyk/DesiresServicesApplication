@@ -32,9 +32,9 @@ addEmployee.addEventListener('click', function () {
             inputNumber.value = '';
             addEmployee.disabled = true;
             console.log("Employee " + employee + " was added");
-            window.location.reload();
-        },
 
+            $("#employeeList").load(' #employeeList');
+        },
         error: function () {
             console.log("Failed to save");
         }
@@ -54,6 +54,8 @@ for (let i = 0; i < btnDeleteEl.length; i++) {
                         type: 'delete',
                         contentType: 'application/json',
                         success: function () {
+
+                            $("#employeeList").load(' #employeeList');
                         },
                         error: function () {
                             console.log("Failed to delete");
@@ -172,7 +174,8 @@ btnOnClickNew.addEventListener('click', function () {
                 }
                 scheduleList.before(commonDivForSchedule);
             }else{
-                message.appendChild(document.createTextNode('Кількість блоків перевищує за кількість працівників у списку'));
+                message.appendChild(document.createTextNode('Кількість праціників у розкладі не має перевищувати ' +
+                    'за кількість працівників у списку. Додайте нового працівника, щоб повторити операцію'));
                 scheduleList.before(message);
                 variableCheckLimit--;
             }
