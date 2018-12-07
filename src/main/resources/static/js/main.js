@@ -4,6 +4,8 @@ let addEmployee = document.querySelector("#addEmployee");
 
 let inputOnKey = document.querySelector('#fullName');
 let inputNumber = document.querySelector('#number');
+let inputOnEm = document.querySelector('#email');
+let inputPass = document.querySelector('#password');
 let list = document.querySelector('.list-of-workers');
 
 inputOnKey.addEventListener('keyup', function () {
@@ -14,12 +16,22 @@ inputNumber.addEventListener('keyup', function () {
     inputNumber.value !== '' ? addEmployee.disabled = false : addEmployee.disabled = true;
 });
 
+inputOnEm.addEventListener('keyup', function () {
+    inputOnEm.value !== '' ? addEmployee.disabled = false : addEmployee.disabled = true;
+});
+
+inputPass.addEventListener('keyup', function () {
+    inputPass.value !== '' ? addEmployee.disabled = false : addEmployee.disabled = true;
+});
+
 let countNumber = 0;
 addEmployee.addEventListener('click', function () {
     countNumber = 0;
     let employee = {
         fullName: inputOnKey.value,
-        phoneNumber: inputNumber.value
+        phoneNumber: inputNumber.value,
+        email: inputOnEm.value,
+        password: inputPass.value
     };
     console.log(employee);
     $.ajax({
@@ -30,6 +42,8 @@ addEmployee.addEventListener('click', function () {
         success: function (data) {
             inputOnKey.value = '';
             inputNumber.value = '';
+            inputOnEm.value = '';
+            inputPass.value = '';
             addEmployee.disabled = true;
             console.log("Employee " + employee + " was added");
 

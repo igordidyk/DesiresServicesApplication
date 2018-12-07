@@ -122,9 +122,10 @@ formP2.appendChild(document.createTextNode('Password:'));
 let formInput2 = document.createElement('input');
 setAttributes(formInput2, {
     'class': 'style-form',
-    'type': 'text',
+    'type': 'password',
     'placeholder': 'password',
-    'id': 'password'
+    'id': 'password',
+    'pattern': '.{6,}'
 });
 
 let formSubmit = document.createElement('button');
@@ -235,10 +236,11 @@ signUpFormP3.appendChild(document.createTextNode('Password:'));
 let signUpFormInput3 = document.createElement('input');
 setAttributes(signUpFormInput3, {
     'class': 'style-form',
-    'type': 'text',
+    'type': 'password',
     'placeholder': 'Password',
     'name': 'user-surname',
-    'required': 'required'
+    'required': 'required',
+    'pattern': '.{6,}'
 });
 
 let signUpFormP4 = document.createElement('p');

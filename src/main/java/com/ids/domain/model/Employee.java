@@ -24,4 +24,10 @@ public class Employee extends AuditModel{
     @Column(name = "phone_number", unique = false, nullable = false)
     private String phoneNumber;
 
+//    @Column(name = "email_employee",nullable = false)
+//    private String email;
+//
+//    @Column(name = "password_employee", unique = false, nullable = false)
+//    private String password;
+
 }
